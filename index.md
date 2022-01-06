@@ -1,4 +1,6 @@
 ## Projects
+- MongoDB Exchange Rates Analysis for Canadian Dollars
+    - [GitHub](https://git.io/JyBd1)
 - Python Movie Correlation Project
     - [GitHub](https://git.io/JEyks)
 - SQL Server Data Cleaning
