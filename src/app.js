@@ -11,8 +11,9 @@ import "./app.css";
 import BackToTop from "./components/helper/back-to-top/back-to-top";
 import ScrollToTop from "./components/helper/scroll-to-top";
 import { ThemeContext } from "./contexts/theme-context";
-import { HomePage, ProjectPage } from "./pages";
 import AboutPage from "./pages/about";
+import HomePage from "./pages/home";
+import ProjectPage from "./pages/project";
 
 function App() {
   const { theme } = useContext(ThemeContext);
