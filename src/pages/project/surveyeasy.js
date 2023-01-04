@@ -20,9 +20,10 @@ function SurveyEasyPage() {
         <CardMedia
           component="img"
           sx={{ objectFit: "contain" }}
-          image="https://picsum.photos/2000/300"
+          image="https://picsum.photos/1000/300"
         />
       </Card>
+
       <Container>
         <Typography variant="h2" align="center" sx={{ fontWeight: "bold" }}>
           SurveyEasy
@@ -30,22 +31,17 @@ function SurveyEasyPage() {
         <Grid
           container
           sx={{
-            marginTop: 1, // distance from title
+            marginTop: 18, // distance from title
           }}
         >
           <Grid item xs={6}>
-            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            <Typography variant="h8" sx={{ fontWeight: "bold" }}>
               Project
             </Typography>
-            <Typography variant="body1">
-              description description description description description
-              description description description description description
-              description description description description description
-              description
-            </Typography>
+            <Typography variant="body1">Web Design & Development</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            <Typography variant="h8" sx={{ fontWeight: "bold" }}>
               Background
             </Typography>
             <Typography variant="body1">
@@ -56,7 +52,35 @@ function SurveyEasyPage() {
             </Typography>
           </Grid>
         </Grid>
-
+        <Grid
+          container
+          sx={{
+            marginTop: 6, // distance from title
+          }}
+        >
+          <Grid item xs={6}>
+            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+              The Challenge
+            </Typography>
+            <Typography variant="body1">
+              description description description description description
+              description description description description description
+              description description description description description
+              description
+            </Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+              Goal
+            </Typography>
+            <Typography variant="body1">
+              description description description description description
+              description description description description description
+              description description description description description
+              description
+            </Typography>
+          </Grid>
+        </Grid>
         <Grid
           container
           sx={{
@@ -68,10 +92,7 @@ function SurveyEasyPage() {
               Solutions
             </Typography>
             <Typography variant="body1" align="right">
-              description description description description description
-              description description description description description
-              description description description description description
-              description
+              01: The first solution is
             </Typography>
           </Grid>
           <Grid item xs={6}>
