@@ -15,7 +15,7 @@ import ProjectPageUI from "../../components/core-ui/project-page/project-page-ui
 import { ThemeContext } from "../../contexts/theme-context";
 import { projectsData } from "../../data/projectsData";
 
-function SurveyEasyPage() {
+function TAManagementPage() {
   const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
 
   return (
@@ -29,7 +29,7 @@ function SurveyEasyPage() {
       </Card>
       <Container>
         <Typography variant="h2" align="center" sx={{ fontWeight: "bold" }}>
-          SurveyEasy
+          TA Management
         </Typography>
 
         <Fade bottom>
@@ -251,4 +251,4 @@ function SurveyEasyPage() {
   );
 }
 
-export default SurveyEasyPage;
+export default TAManagementPage;
