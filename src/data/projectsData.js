@@ -1,12 +1,3 @@
-import eight from "../assets/svg/projects/eight.svg";
-import five from "../assets/svg/projects/five.svg";
-import four from "../assets/svg/projects/four.svg";
-import one from "../assets/svg/projects/one.svg";
-import seven from "../assets/svg/projects/seven.svg";
-import six from "../assets/svg/projects/six.svg";
-import three from "../assets/svg/projects/three.svg";
-import two from "../assets/svg/projects/two.svg";
-
 export const projectsData = [
   {
     // TODO
@@ -17,7 +8,7 @@ export const projectsData = [
     tags: ["Figma", "React", ""], // 写role 还是用到的工具？
     code: "",
     demo: "https://www.aylanetworks.com/",
-    image: six,
+    image: "",
   },
   {
     id: 2,
@@ -27,7 +18,7 @@ export const projectsData = [
     tags: ["React", "Express", "Material Ui"],
     code: "https://github.com/said7388/jewelry-niche",
     demo: "https://pandora-web.netlify.app/",
-    image: seven,
+    image: "",
   },
   {
     id: 3,
@@ -36,7 +27,7 @@ export const projectsData = [
     tags: ["React", "CSS", "Material Ui"],
     code: "https://github.com/said7388/Travel-Agency-client",
     demo: "https://travel-agency-fc58b.web.app/",
-    image: eight,
+    image: "",
   },
   {
     id: 4,
@@ -46,7 +37,7 @@ export const projectsData = [
     tags: ["Flutter", "Firebase"],
     code: "https://github.com/hhhrrrttt222111/developer-portfolio",
     demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
-    image: four,
+    image: "",
   },
   {
     id: 5,
@@ -55,7 +46,7 @@ export const projectsData = [
     tags: ["React Native", "Firebase"],
     code: "https://github.com/hhhrrrttt222111/developer-portfolio",
     demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
-    image: five,
+    image: "",
   },
   {
     id: 6,
@@ -64,7 +55,7 @@ export const projectsData = [
     tags: ["Flutter"],
     code: "https://github.com/hhhrrrttt222111/developer-portfolio",
     demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
-    image: one,
+    image: "",
   },
   {
     id: 7,
@@ -73,7 +64,7 @@ export const projectsData = [
     tags: ["React", "Redux", "Bootstrap"],
     code: "https://github.com/hhhrrrttt222111/developer-portfolio",
     demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
-    image: two,
+    image: "",
   },
   {
     id: 8,
@@ -83,7 +74,7 @@ export const projectsData = [
     tags: ["Flutter", "React"],
     code: "https://github.com/hhhrrrttt222111/developer-portfolio",
     demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
-    image: three,
+    image: "",
   },
 ];
 
@@ -98,6 +89,6 @@ export const projectsData = [
     tags: ['Flutter', 'React'],
     code: '',
     demo: '',
-    image: ''
+    image:''
 }, 
 */

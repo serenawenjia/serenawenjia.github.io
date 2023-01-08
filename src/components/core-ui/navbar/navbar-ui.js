@@ -94,21 +94,29 @@ function NavbarUI({
             </Fade>
 
             <Fade left>
-              <a target="_blank" rel="noreferrer" href={headerData.cvUrl}>
-                <div className={classes.drawerItem}>
-                  <HiDocumentText className={classes.drawerIcon} />
-                  <span className={classes.drawerLinks}>CV</span>
-                </div>
-              </a>
+              <div>
+                <a target="_blank" rel="noreferrer" href={headerData.cvUrl}>
+                  <div className={classes.drawerItem}>
+                    <HiDocumentText className={classes.drawerIcon} />
+                    <span className={classes.drawerLinks}>CV</span>
+                  </div>
+                </a>
+              </div>
             </Fade>
 
             <Fade left>
-              <a target="_blank" rel="noreferrer" href={headerData.contactUrl}>
-                <div className={classes.drawerItem}>
-                  <MdPhone className={classes.drawerIcon} />
-                  <span className={classes.drawerLinks}>Contact</span>
-                </div>
-              </a>
+              <div>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={headerData.contactUrl}
+                >
+                  <div className={classes.drawerItem}>
+                    <MdPhone className={classes.drawerIcon} />
+                    <span className={classes.drawerLinks}>Contact</span>
+                  </div>
+                </a>
+              </div>
             </Fade>
           </div>
         </div>
