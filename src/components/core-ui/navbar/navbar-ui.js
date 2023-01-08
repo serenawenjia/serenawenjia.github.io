@@ -94,24 +94,16 @@ function NavbarUI({
             </Fade>
 
             <Fade left>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://drive.google.com/file/d/1NsN8EVO-0B9po-BHpbCZeczlwRzplvzK/view"
-              >
+              <a target="_blank" rel="noreferrer" href={headerData.cvUrl}>
                 <div className={classes.drawerItem}>
                   <HiDocumentText className={classes.drawerIcon} />
-                  <span className={classes.drawerLinks}>Resume</span>
+                  <span className={classes.drawerLinks}>CV</span>
                 </div>
               </a>
             </Fade>
 
             <Fade left>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="mailto:wenjia.liu@mail.mcgill.ca?subject=Let%27s%20get%20in%20touch!"
-              >
+              <a target="_blank" rel="noreferrer" href={headerData.contactUrl}>
                 <div className={classes.drawerItem}>
                   <MdPhone className={classes.drawerIcon} />
                   <span className={classes.drawerLinks}>Contact</span>
