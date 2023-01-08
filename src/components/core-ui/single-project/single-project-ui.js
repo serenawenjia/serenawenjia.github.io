@@ -3,6 +3,7 @@ import { FaCode, FaPlay } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
 import placeholder from "../../../assets/png/placeholder.png";
 import "./single-project.css";
+import { SlBookOpen } from "react-icons/sl";
 
 function SingleProjectUI({
   id,
@@ -40,25 +41,10 @@ function SingleProjectUI({
                 .replace(" ", "-")
                 .toLowerCase()}-demo`}
             >
-              <FaPlay
+              <SlBookOpen
                 id={`${name.replace(" ", "-").toLowerCase()}-demo`}
                 className={classes.icon}
                 aria-label="Demo"
-              />
-            </a>
-            <a
-              href={code}
-              target="_blank"
-              rel="noreferrer"
-              className={classes.iconBtn}
-              aria-labelledby={`${name.replace(" ", "-").toLowerCase()} ${name
-                .replace(" ", "-")
-                .toLowerCase()}-code`}
-            >
-              <FaCode
-                id={`${name.replace(" ", "-").toLowerCase()}-code`}
-                className={classes.icon}
-                aria-label="Code"
               />
             </a>
           </div>

@@ -6,8 +6,7 @@ export const projectsData = [
     projectDesc:
       "This project is about to design and implement a website that is easy-to-use for both researchers and survey participants.",
     tags: ["Figma", "React", ""], // 写role 还是用到的工具？
-    code: "",
-    demo: "https://www.aylanetworks.com/",
+    demo: "/projects/surveyeasy",
     image: "",
   },
   {
@@ -16,8 +15,7 @@ export const projectsData = [
     projectDesc:
       "This project is a Jewelry shop, Customer can be buy product and manage them and make payment.",
     tags: ["React", "Express", "Material Ui"],
-    code: "https://github.com/said7388/jewelry-niche",
-    demo: "https://pandora-web.netlify.app/",
+    demo: "/projects/ta-management",
     image: "",
   },
   {
@@ -25,7 +23,6 @@ export const projectsData = [
     projectName: "Travel Agency",
     projectDesc: "This project about travel agency management.",
     tags: ["React", "CSS", "Material Ui"],
-    code: "https://github.com/said7388/Travel-Agency-client",
     demo: "https://travel-agency-fc58b.web.app/",
     image: "",
   },
@@ -35,7 +32,6 @@ export const projectsData = [
     projectDesc:
       "This project involves the development of an Android application for viewing and managing patient data.",
     tags: ["Flutter", "Firebase"],
-    code: "https://github.com/hhhrrrttt222111/developer-portfolio",
     demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
     image: "",
   },
@@ -44,7 +40,6 @@ export const projectsData = [
     projectName: "E-Commerce App",
     projectDesc: "A Simple E-commerce application",
     tags: ["React Native", "Firebase"],
-    code: "https://github.com/hhhrrrttt222111/developer-portfolio",
     demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
     image: "",
   },
@@ -53,7 +48,6 @@ export const projectsData = [
     projectName: "Uber Lite",
     projectDesc: "Uber clone",
     tags: ["Flutter"],
-    code: "https://github.com/hhhrrrttt222111/developer-portfolio",
     demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
     image: "",
   },
@@ -62,7 +56,6 @@ export const projectsData = [
     projectName: "Stock Market App",
     projectDesc: "A simple stock market API app",
     tags: ["React", "Redux", "Bootstrap"],
-    code: "https://github.com/hhhrrrttt222111/developer-portfolio",
     demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
     image: "",
   },
@@ -72,7 +65,6 @@ export const projectsData = [
     projectDesc:
       "The carpooling system merges multiple people in a car which leads to meet new people, reduces pollution",
     tags: ["Flutter", "React"],
-    code: "https://github.com/hhhrrrttt222111/developer-portfolio",
     demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
     image: "",
   },
@@ -87,7 +79,6 @@ export const projectsData = [
     projectName: 'Car Pooling System',
     projectDesc: '',
     tags: ['Flutter', 'React'],
-    code: '',
     demo: '',
     image:''
 }, 

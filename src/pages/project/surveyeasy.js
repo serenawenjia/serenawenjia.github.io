@@ -18,6 +18,8 @@ import { ThemeContext } from "../../contexts/theme-context";
 import { projectsData } from "../../data/projectsData";
 import surveyResearcherImage from "../../assets/images/surveyeasy/survey-researcher.png";
 import surveyParticipantImage from "../../assets/images/surveyeasy/survey-participant.png";
+import empathyMapParticipantImage from "../../assets/images/surveyeasy/empathy-map-participant.png";
+import userFlowImage from "../../assets/images/surveyeasy/user-flow.png";
 
 function SurveyEasyPage() {
   const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
@@ -291,11 +293,87 @@ function DiscoverSection() {
 }
 
 function EmpathizeAndDefineSection() {
-  return <>hi</>;
+  return (
+    <>
+      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+        User Persona
+      </Typography>
+
+      <Grid container spacing={3}>
+        <Grid item xs={12} lg={4}>
+          <Image src={"https://picsum.photos/1000/300"} fit="contain" />
+        </Grid>
+        <Grid item xs={12} lg={8}>
+          <Typography variant="body1">
+            Olivia is a postdoctoral research fellow of psychology at the
+            University of Washington, Seattle. In her spare time, she also has a
+            part-time job as math tutor for high school students and
+            undergraduate students. She lives with 3 friends off campus and
+            enjoys hanging out with her friends. She usually conducts tons of
+            surveys and analyzes the survey result for the purpose of her
+            research papers.
+          </Typography>
+
+          <Typography variant="h6" sx={{ fontWeight: "bold" }} align="center">
+            Personality Traits
+          </Typography>
+          <Typography variant="body1" align="center">
+            Hard-working, Self-confident, Friendly
+          </Typography>
+
+          <Grid container spacing={3}>
+            <Grid item lg={6}>
+              <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                Goal
+              </Typography>
+              <Typography variant="body1">
+                Easy to edit the survey questions at any time
+              </Typography>
+              <Typography variant="body1">
+                Close the survey automatically after receiving the targeted
+                number of responses
+              </Typography>
+              <Typography variant="body1">
+                View response with automatic data visualization
+              </Typography>
+            </Grid>
+            <Grid item lg={6}>
+              <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                Frustration
+              </Typography>
+              <Typography variant="body1">
+                It’s hard to get enough response from the target audience
+              </Typography>
+              <Typography variant="body1">
+                Some responses are from ineligible participants
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+        Empathy Map
+      </Typography>
+      <Image src={empathyMapParticipantImage} fit="contain" />
+    </>
+  );
 }
 
 function IdeateAndPrototypeSection() {
-  return <>hi</>;
+  return (
+    <>
+      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+        User Flow
+      </Typography>
+      <Image src={userFlowImage} fit="contain" />
+
+      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+        Low-Fidelity Wireframe
+      </Typography>
+      <Image src={userFlowImage} fit="contain" />
+    </>
+  );
 }
 
 function ValidateSection() {
