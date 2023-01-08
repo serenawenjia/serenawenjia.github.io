@@ -9,17 +9,24 @@ import {
   Typography,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import Image from "mui-image";
 import React, { useContext, useRef, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Fade } from "react-reveal";
 import ProjectPageUI from "../../components/core-ui/project-page/project-page-ui";
 import { ThemeContext } from "../../contexts/theme-context";
 import { projectsData } from "../../data/projectsData";
+import surveyResearcherImage from "../../assets/images/surveyeasy/survey-researcher.png";
+import surveyParticipantImage from "../../assets/images/surveyeasy/survey-participant.png";
 
 function SurveyEasyPage() {
   const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
 
   return (
     <>
+      <Helmet>
+        <title>Wenjia Liu | SurveyEasy</title>
+      </Helmet>
       <Card elevation={0}>
         <CardMedia
           component="img"
@@ -91,7 +98,7 @@ function SurveyEasyPage() {
             </Grid>
             <Grid item xs={12} lg={9}>
               <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-                Goal
+                Project Goal
               </Typography>
               <Typography variant="body1">
                 Design and implement a website that is easy-to-use for both
@@ -200,11 +207,7 @@ function SurveyEasyPage() {
           <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
             Discover
           </Typography>
-          <Typography variant="body1">
-            I conducted a survey with X researchers and Y survey participants to
-            understand their pain points when posting and taking surveys. Some
-            sample questions are listed below:
-          </Typography>
+          <DiscoverSection />
         </Container>
       </Fade>
       <Fade bottom>
@@ -212,18 +215,7 @@ function SurveyEasyPage() {
           <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
             Empathize & Define
           </Typography>
-          <Typography variant="body1">
-            Olivia is a postdoctoral research fellow of psychology at the
-            University of Washington, Seattle. In her spare time, she also has a
-            part-time job as math tutor for high school students and
-            undergraduate students. She lives with 3 friends off campus and
-            enjoys hanging out with her friends. She conducts and analyzes tons
-            of surveys for her research paper Goal: Easy to edit the survey
-            questions at any time Close the survey automatically after receiving
-            the targeted number of responses View response with automatic data
-            visualization Frustration: It’s hard to get enough response from the
-            target audience Some responses are from ineligible participants
-          </Typography>
+          <EmpathizeAndDefineSection />
         </Container>
       </Fade>
       <Fade bottom>
@@ -231,6 +223,7 @@ function SurveyEasyPage() {
           <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
             Ideate & Prototype
           </Typography>
+          <IdeateAndPrototypeSection />
         </Container>
       </Fade>
       <Fade bottom>
@@ -238,6 +231,7 @@ function SurveyEasyPage() {
           <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
             Validate
           </Typography>
+          <ValidateSection />
         </Container>
       </Fade>
       <Fade bottom>
@@ -245,6 +239,7 @@ function SurveyEasyPage() {
           <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
             Final Delivery
           </Typography>
+          <FinalDeliverySection />
         </Container>
       </Fade>
     </>
@@ -252,3 +247,61 @@ function SurveyEasyPage() {
 }
 
 export default SurveyEasyPage;
+
+function DiscoverSection() {
+  console.log(surveyResearcherImage);
+  return (
+    <>
+      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+        Research Methods
+      </Typography>
+      <Typography variant="body1">
+        In order to better understand the users, I started user research by
+        surveys and interviews.
+      </Typography>
+
+      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+        Target Users
+      </Typography>
+      <Typography variant="body1">Primary User Group</Typography>
+      <Typography variant="body1">
+        Researchers, Students, People who like to get rewarded while helping the
+        others currently seeking for survey to post and fill out
+      </Typography>
+
+      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+        Survey & Interview
+      </Typography>
+      <Typography variant="body1">
+        I conducted an online survey of 38 potential users to understand their
+        desires and challenges they faced when they post surveys and fill out
+        surveys. Some sample questions are listed below:
+      </Typography>
+
+      <Grid container spacing={3}>
+        <Grid item xs={6}>
+          <Image src={surveyResearcherImage} fit="contain" />
+        </Grid>
+        <Grid item xs={6}>
+          <Image src={surveyParticipantImage} fit="contain" />
+        </Grid>
+      </Grid>
+    </>
+  );
+}
+
+function EmpathizeAndDefineSection() {
+  return <>hi</>;
+}
+
+function IdeateAndPrototypeSection() {
+  return <>hi</>;
+}
+
+function ValidateSection() {
+  return <>hi</>;
+}
+
+function FinalDeliverySection() {
+  return <>hi</>;
+}

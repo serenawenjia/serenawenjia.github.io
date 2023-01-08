@@ -16,7 +16,7 @@ function HomePage() {
   return (
     <div>
       <Helmet>
-        <title>{headerData.name} - Porfolio</title>
+        <title>Wenjia Liu | Home</title>
       </Helmet>
       <Navbar />
       <Landing />

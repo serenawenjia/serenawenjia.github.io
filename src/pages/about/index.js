@@ -16,7 +16,7 @@ function AboutPage() {
   return (
     <div>
       <Helmet>
-        <title>{headerData.name} - Porfolio</title>
+        <title>Wenjia Liu | About</title>
       </Helmet>
       <Navbar />
       <About />
