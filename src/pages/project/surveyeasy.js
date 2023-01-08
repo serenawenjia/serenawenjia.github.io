@@ -27,6 +27,7 @@ import validateR from "../../assets/images/surveyeasy/validate-r.png";
 import validateP from "../../assets/images/surveyeasy/validate-p.png";
 import refine1 from "../../assets/images/surveyeasy/refine-1.png";
 import refine2 from "../../assets/images/surveyeasy/refine-2.png";
+import Navbar from "../../components/container/navbar";
 
 function SurveyEasyPage() {
   const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
@@ -36,6 +37,7 @@ function SurveyEasyPage() {
       <Helmet>
         <title>Wenjia Liu | SurveyEasy</title>
       </Helmet>
+      <Navbar />
       <Card elevation={0}>
         <CardMedia
           component="img"
@@ -150,7 +152,7 @@ function SurveyEasyPage() {
                 color="inherit"
                 underline="always"
                 onClick={() =>
-                  sectionRefs[0].current.scrollIntoView({ behavior: "smooth" })
+                  sectionRefs[1].current.scrollIntoView({ behavior: "smooth" })
                 }
               >
                 <Typography variant="h5" sx={{ fontWeight: "bold" }}>
@@ -167,7 +169,7 @@ function SurveyEasyPage() {
                 color="inherit"
                 underline="always"
                 onClick={() =>
-                  sectionRefs[0].current.scrollIntoView({ behavior: "smooth" })
+                  sectionRefs[2].current.scrollIntoView({ behavior: "smooth" })
                 }
               >
                 <Typography variant="h5" sx={{ fontWeight: "bold" }}>
@@ -184,7 +186,7 @@ function SurveyEasyPage() {
                 color="inherit"
                 underline="always"
                 onClick={() =>
-                  sectionRefs[0].current.scrollIntoView({ behavior: "smooth" })
+                  sectionRefs[3].current.scrollIntoView({ behavior: "smooth" })
                 }
               >
                 <Typography variant="h5" sx={{ fontWeight: "bold" }}>
@@ -199,7 +201,7 @@ function SurveyEasyPage() {
                 color="inherit"
                 underline="always"
                 onClick={() =>
-                  sectionRefs[0].current.scrollIntoView({ behavior: "smooth" })
+                  sectionRefs[4].current.scrollIntoView({ behavior: "smooth" })
                 }
               >
                 <Typography variant="h5" sx={{ fontWeight: "bold" }}>
