@@ -13,19 +13,14 @@ import "./navbar.css";
 
 function NavbarUI({
   theme,
-  shortname,
   classes,
   handleDrawerOpen,
   handleDrawerClose,
   open,
-  changeTheme,
-  isDark,
 }) {
   return (
-    <div className="navbar">
+    <>
       <div className="navbar--container">
-        <h1 style={{ color: theme.primary }}>Wenjia</h1>
-
         <IoMenuSharp
           className={classes.navMenu}
           onClick={handleDrawerOpen}
@@ -33,7 +28,6 @@ function NavbarUI({
         />
       </div>
       <Drawer
-        variant="temporary"
         onClose={(event, reason) => {
           if (reason !== "backdropClick") {
             handleDrawerClose();
@@ -62,6 +56,7 @@ function NavbarUI({
             aria-label="Close"
           />
         </div>
+        <br />
         <br />
 
         <div onClick={handleDrawerClose}>
@@ -121,7 +116,7 @@ function NavbarUI({
           </div>
         </div>
       </Drawer>
-    </div>
+    </>
   );
 }
 
