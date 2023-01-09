@@ -592,9 +592,11 @@ function ValidateSection() {
         </Grid>
       </Grid>
 
-      <Stack direction="row" height={100}>
+      <Stack direction="row" height={100} justifyContent="center">
         <Image duration={0} src={colorLight} width="10%" />
         <Image duration={0} src={colorDark} width="10%" />
+      </Stack>
+      <Stack direction="row" justifyContent="center">
         <Image duration={0} src={roboto} width="50%" />
       </Stack>
     </>
