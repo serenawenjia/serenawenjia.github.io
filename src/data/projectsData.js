@@ -1,13 +1,15 @@
+import surveyeasy from "../assets/images/surveyeasy/cover.png";
+
 export const projectsData = [
   {
     // TODO
     id: 1,
     projectName: "Research, Design, & Development: SurveyEasy Website",
     projectDesc:
-      "This project is about to design and implement a website that is easy-to-use for both researchers and survey participants.",
-    tags: ["Figma", "React", ""], // 写role 还是用到的工具？
+      "This project is about designing and implementing a website that is easy-to-use for both researchers and survey participants.",
+    tags: ["Figma", "React"], // 写role 还是用到的工具？
     demo: "/projects/surveyeasy",
-    image: "",
+    image: surveyeasy,
   },
   {
     id: 2,

@@ -10,7 +10,6 @@ function SingleProjectUI({
   name,
   desc,
   tags,
-  code,
   demo,
   image,
   theme,
@@ -30,7 +29,15 @@ function SingleProjectUI({
           >
             {name}
           </h2>
-          <img src={image ? image : placeholder} alt={name} />
+          <img
+            src={image ? image : placeholder}
+            alt={name}
+            style={{
+              height: "240px",
+              width: "auto",
+              // mixBlendMode: "multiply"
+            }}
+          />
           <div className="project--showcaseBtn">
             <a
               href={demo}

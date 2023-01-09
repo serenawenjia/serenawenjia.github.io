@@ -27,6 +27,7 @@ import validateR from "../../assets/images/surveyeasy/validate-r.png";
 import validateP from "../../assets/images/surveyeasy/validate-p.png";
 import refine1 from "../../assets/images/surveyeasy/refine-1.png";
 import refine2 from "../../assets/images/surveyeasy/refine-2.png";
+import cover from "../../assets/images/surveyeasy/cover.png";
 import Navbar from "../../components/container/navbar";
 
 function SurveyEasyPage() {
@@ -38,14 +39,10 @@ function SurveyEasyPage() {
         <title>Wenjia Liu | SurveyEasy</title>
       </Helmet>
       <Navbar />
-      <Card elevation={0}>
-        <CardMedia
-          component="img"
-          sx={{ objectFit: "contain" }}
-          image="https://picsum.photos/1000/300"
-        />
-      </Card>
+
       <Container>
+        <Image src={cover} fit="contain" duration={0} />
+
         <Typography variant="h2" align="center" sx={{ fontWeight: "bold" }}>
           SurveyEasy
         </Typography>
@@ -54,7 +51,7 @@ function SurveyEasyPage() {
           <Grid
             container
             sx={{
-              marginTop: 18, // distance from title
+              marginTop: 6, // distance from title
             }}
             spacing={3}
           >
@@ -94,7 +91,7 @@ function SurveyEasyPage() {
           <Grid
             container
             sx={{
-              marginTop: 6, // distance from title
+              marginTop: 6,
             }}
             spacing={3}
           >
