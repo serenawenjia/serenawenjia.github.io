@@ -1,4 +1,11 @@
-import { Container, Grid, Link, Stack, Typography } from "@mui/material";
+import {
+  Container,
+  CssBaseline,
+  Grid,
+  Link,
+  Stack,
+  Typography,
+} from "@mui/material";
 import Image from "mui-image";
 import React, { useRef } from "react";
 import { Helmet } from "react-helmet";
@@ -25,6 +32,7 @@ function SurveyEasyPage() {
 
   return (
     <>
+      <CssBaseline />
       <Helmet>
         <title>Wenjia Liu | SurveyEasy</title>
       </Helmet>
@@ -85,20 +93,20 @@ function SurveyEasyPage() {
             }}
             spacing={3}
           >
-            <Grid item xs={6} lg={3}>
+            <Grid item xs={6} lg={5}>
               <Typography variant="h4" sx={{ fontWeight: "bold" }} gutterBottom>
                 The Challenge
               </Typography>
-              <Typography variant="body1">
+              <Typography variant="h6">
                 How can we provide the most convenient survey platform for
                 researchers and participants alike?
               </Typography>
             </Grid>
-            <Grid item xs={12} lg={9}>
+            <Grid item xs={12} lg={7}>
               <Typography variant="h4" sx={{ fontWeight: "bold" }} gutterBottom>
                 Project Goal
               </Typography>
-              <Typography variant="body1">
+              <Typography variant="h6">
                 Design and implement a website that is easy-to-use for both
                 researchers and survey participants. Specifically, for
                 researchers, the website makes the process of designing and
@@ -311,7 +319,16 @@ function EmpathizeAndDefineSection() {
         <Grid item xs={12} lg={4}>
           <Image src={personaR} fit="contain" />
         </Grid>
-        <Grid item xs={12} lg={8}>
+        <Grid
+          item
+          xs={12}
+          lg={8}
+          sx={{
+            border: "1px solid black",
+            borderRadius: 6,
+            padding: 3,
+          }}
+        >
           <Typography variant="body1">
             Olivia is a postdoctoral research fellow of psychology at the
             University of Washington, Seattle. In her spare time, she also has a
