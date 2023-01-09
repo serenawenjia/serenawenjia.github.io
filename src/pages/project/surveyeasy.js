@@ -24,8 +24,26 @@ import refine1New from "../../assets/images/surveyeasy/refine-1-new.png";
 import refine2Old from "../../assets/images/surveyeasy/refine-2-old.png";
 import refine2New from "../../assets/images/surveyeasy/refine-2-new.png";
 import cover from "../../assets/images/surveyeasy/cover.png";
-import leftDownArrow from "../../assets/images/left-down.png";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+
+function BigHeader({ children, sx }) {
+  return (
+    <Typography
+      variant="h3"
+      sx={{ fontWeight: "bold", marginTop: 5, marginBottom: 5 }}
+    >
+      {children}
+    </Typography>
+  );
+}
+
+function SmallHeader({ children, sx }) {
+  return (
+    <Typography variant="h5" sx={{ fontWeight: "bold", marginTop: 5, ...sx }}>
+      {children}
+    </Typography>
+  );
+}
 
 function SurveyEasyPage() {
   const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
@@ -120,10 +138,8 @@ function SurveyEasyPage() {
         </Fade>
       </Container>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }}>
-          <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-            Process
-          </Typography>
+        <Container>
+          <BigHeader>Process</BigHeader>
           <Grid container>
             <Grid item xs={6} lg={12 / 5}>
               <Link
@@ -229,27 +245,27 @@ function SurveyEasyPage() {
         </Container>
       </Fade>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }} ref={sectionRefs[0]}>
+        <Container ref={sectionRefs[0]}>
           <DiscoverSection />
         </Container>
       </Fade>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }} ref={sectionRefs[1]}>
+        <Container ref={sectionRefs[1]}>
           <EmpathizeAndDefineSection />
         </Container>
       </Fade>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }} ref={sectionRefs[2]}>
+        <Container ref={sectionRefs[2]}>
           <IdeateAndPrototypeSection />
         </Container>
       </Fade>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }} ref={sectionRefs[3]}>
+        <Container ref={sectionRefs[3]}>
           <ValidateSection />
         </Container>
       </Fade>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }} ref={sectionRefs[4]}>
+        <Container ref={sectionRefs[4]}>
           <FinalDeliverySection />
         </Container>
       </Fade>
@@ -262,30 +278,22 @@ export default SurveyEasyPage;
 function DiscoverSection() {
   return (
     <>
-      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-        Discover
-      </Typography>
+      <BigHeader>Discover</BigHeader>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Research Methods
-      </Typography>
+      <SmallHeader>Research Methods</SmallHeader>
       <Typography variant="body1">
         In order to better understand the users, I started user research by
         surveys and interviews.
       </Typography>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Target Users
-      </Typography>
+      <SmallHeader>Target Users</SmallHeader>
       <Typography variant="body1">Primary User Group</Typography>
       <Typography variant="body1">
         Researchers, Students, People who like to get rewarded while helping the
         others currently seeking for survey to post and fill out
       </Typography>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Survey & Interview
-      </Typography>
+      <SmallHeader>Survey & Interview</SmallHeader>
       <Typography variant="body1">
         I conducted an online survey of 38 potential users to understand their
         desires and challenges they faced when they post surveys and fill out
@@ -307,29 +315,25 @@ function DiscoverSection() {
 function EmpathizeAndDefineSection() {
   return (
     <>
-      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-        Empathize & Define
-      </Typography>
+      <BigHeader>Empathize & Define</BigHeader>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        User Persona
-      </Typography>
+      <SmallHeader sx={{ marginBottom: 5 }}>User Persona</SmallHeader>
 
-      <Grid container spacing={3}>
-        <Grid item xs={12} lg={4}>
+      <Grid
+        container
+        spacing={3}
+        sx={{
+          border: "1px solid black",
+          borderRadius: 6,
+          padding: 3,
+          marginBottom: 5,
+        }}
+      >
+        <Grid item lg={4}>
           <Image src={personaR} fit="contain" />
         </Grid>
-        <Grid
-          item
-          xs={12}
-          lg={8}
-          sx={{
-            border: "1px solid black",
-            borderRadius: 6,
-            padding: 3,
-          }}
-        >
-          <Typography variant="body1">
+        <Grid item lg={8}>
+          <Typography gutterBottom variant="body1">
             Olivia is a postdoctoral research fellow of psychology at the
             University of Washington, Seattle. In her spare time, she also has a
             part-time job as math tutor for high school students and
@@ -342,7 +346,7 @@ function EmpathizeAndDefineSection() {
           <Typography variant="h6" sx={{ fontWeight: "bold" }} align="center">
             Personality Traits
           </Typography>
-          <Typography variant="body1" align="center">
+          <Typography gutterBottom variant="body1" align="center">
             Hard-working, Self-confident, Friendly
           </Typography>
 
@@ -377,12 +381,20 @@ function EmpathizeAndDefineSection() {
         </Grid>
       </Grid>
 
-      <Grid container spacing={3}>
+      <Grid
+        container
+        spacing={3}
+        sx={{
+          border: "1px solid black",
+          borderRadius: 6,
+          padding: 3,
+        }}
+      >
         <Grid item xs={12} lg={4}>
           <Image src={personaP} fit="contain" />
         </Grid>
         <Grid item xs={12} lg={8}>
-          <Typography variant="body1">
+          <Typography gutterBottom variant="body1">
             Tristan is a 34-year-old middle-class man working in the manufacture
             industry. He lives with his wife in Louisville, Kentucky. He works a
             9 to 5 job and usually spends the night with family and friends. He
@@ -395,7 +407,7 @@ function EmpathizeAndDefineSection() {
           <Typography variant="h6" sx={{ fontWeight: "bold" }} align="center">
             Personality Traits
           </Typography>
-          <Typography variant="body1" align="center">
+          <Typography gutterBottom variant="body1" align="center">
             Altruistic, Energetic, Curious
           </Typography>
 
@@ -432,9 +444,7 @@ function EmpathizeAndDefineSection() {
         </Grid>
       </Grid>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Empathy Map
-      </Typography>
+      <SmallHeader>Empathy Map</SmallHeader>
       <Image src={empathyMapP} fit="contain" />
     </>
   );
@@ -443,18 +453,12 @@ function EmpathizeAndDefineSection() {
 function IdeateAndPrototypeSection() {
   return (
     <>
-      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-        Ideate & Prototype
-      </Typography>
+      <BigHeader>Ideate & Prototype</BigHeader>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        User Flow
-      </Typography>
+      <SmallHeader>User Flow</SmallHeader>
       <Image src={userFlowImage} fit="contain" />
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Low-Fidelity Wireframe
-      </Typography>
+      <SmallHeader>Low-Fidelity Wireframe</SmallHeader>
       <Image src={userFlowImage} fit="contain" />
     </>
   );
@@ -463,13 +467,9 @@ function IdeateAndPrototypeSection() {
 function ValidateSection() {
   return (
     <>
-      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-        Validate
-      </Typography>
+      <BigHeader>Validate</BigHeader>
 
-      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-        Validate
-      </Typography>
+      <SmallHeader>Validate</SmallHeader>
 
       <Grid container spacing={3}>
         <Grid item lg={6}>
@@ -493,9 +493,7 @@ function ValidateSection() {
         </Grid>
       </Grid>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Refine
-      </Typography>
+      <SmallHeader>Refine</SmallHeader>
 
       <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
         1. Design Iteration | Participant Home Page
@@ -554,9 +552,7 @@ function ValidateSection() {
 function FinalDeliverySection() {
   return (
     <>
-      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-        Final Delivery
-      </Typography>
+      <BigHeader>Final Delivery</BigHeader>
     </>
   );
 }
