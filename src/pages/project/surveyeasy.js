@@ -492,18 +492,19 @@ function EmpathizeAndDefineSection() {
 
       <Fade bottom>
         <SmallHeader>Pain Points & Solutions</SmallHeader>
+
+        <SmallHeader>Researcher Mode</SmallHeader>
+
         <TableContainer>
           <Table>
-            <TableHead>
+            <TableHead sx={{ th: { fontSize: "1rem", fontWeight: "bold" } }}>
               <TableRow>
-                <TableCell>User Role</TableCell>
                 <TableCell>Pain Points</TableCell>
                 <TableCell>Solutions</TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody sx={{ td: { fontSize: "1rem" } }}>
               <TableRow>
-                <TableCell rowSpan={4}>Researcher</TableCell>
                 <TableCell>
                   Some responses are from ineligible participants
                 </TableCell>
@@ -534,9 +535,22 @@ function EmpathizeAndDefineSection() {
                   Dedicated page with sortable table of past surveys
                 </TableCell>
               </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
 
+        <SmallHeader>Participant Mode</SmallHeader>
+
+        <TableContainer>
+          <Table>
+            <TableHead sx={{ th: { fontSize: "1rem", fontWeight: "bold" } }}>
               <TableRow>
-                <TableCell rowSpan={2}>Participant</TableCell>
+                <TableCell>Pain Points</TableCell>
+                <TableCell>Solutions</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody sx={{ td: { fontSize: "1rem" } }}>
+              <TableRow>
                 <TableCell>Difficulty finding interesting surveys</TableCell>
                 <TableCell>
                   Filter by category, duration, etc. and search by keywords
