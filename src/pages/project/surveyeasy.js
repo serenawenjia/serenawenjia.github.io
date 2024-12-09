@@ -581,11 +581,11 @@ function ValidateSection() {
         01
       </Typography>
       <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
-        Design Iteration | Participant Home Page
+        Design Iteration | Participant's Dashboard
       </Typography>
-      <Typography variant="body1">
-        Add a new function — ‘current filters’, which allows the users to
-        track/edit the current filters easily.
+      <Typography variant="h6">
+        Add a new functionality — "current filters," which allows participants
+        to track/edit the current filters easily.
       </Typography>
       <Grid container>
         <Grid item lg={5.5}>
@@ -609,11 +609,11 @@ function ValidateSection() {
         02
       </Typography>
       <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
-        Show all surveys in the table instead of card component
+        Design Iteration | Researcher's Survey History
       </Typography>
-      <Typography variant="body1">
-        → Pain point: hard to organize all survey (A clear-cut organizational
-        structure)
+      <Typography variant="h6">
+        Show all surveys in a table instead of cards to clearly show information
+        of created surveys
       </Typography>
 
       <Grid container>
@@ -638,11 +638,12 @@ function ValidateSection() {
         03
       </Typography>
       <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
-        Make the survey description stick on the pages, instead of scrolling
-        down with the survey questions.
+        Design Iteration | Participant's Take Survey
       </Typography>
-      <Typography variant="body1">
-        → Pain point: hard to scroll back to the top of page
+      <Typography variant="h6">
+        Make the survey information (title and description) sticky at the top of
+        the page, which participants can always refer instead of having to
+        scroll to the top.
       </Typography>
 
       <Grid container spacing={3} sx={{ marginTop: 5 }}>
@@ -659,23 +660,16 @@ function ValidateSection() {
           </Typography>
           <br />
           <Typography variant="body1">
-            I decided to use Roboto font, as they are easily readable.
+            I decided to use Roboto font, which is easily readable and promotes
+            natural reading rhythm.
           </Typography>
           <br />
           <Typography variant="body1">
-            I used basic and simple icons. I would like to make sure these icons
-            are accessible for users without any confusion.
+            I used basic and simple icons in the MUI library, which are
+            accessible for users without any confusion.
           </Typography>
         </Grid>
       </Grid>
-
-      {/* <Stack direction="row" height={100} justifyContent="center">
-        <Image duration={0} src={colorLight} width="10%" />
-        <Image duration={0} src={colorDark} width="10%" />
-      </Stack>
-      <Stack direction="row" justifyContent="center">
-        <Image duration={0} src={roboto} width="50%" />
-      </Stack> */}
     </>
   );
 }
@@ -733,9 +727,9 @@ function FinalDeliverySection() {
           ></iframe>
         </Grid>
       </Grid>
-      {/* <SmallHeader>Key Features</SmallHeader> */}
+      <SmallHeader>Key Features</SmallHeader>
 
-      {/* <Grid container spacing={3} sx={{ marginTop: 5 }}>
+      <Grid container spacing={3} sx={{ marginTop: 5 }}>
         <Grid item lg={6}>
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>
             Filter
@@ -755,9 +749,9 @@ function FinalDeliverySection() {
           </Typography>
         </Grid>
         <Grid item lg={6}></Grid>
-      </Grid> */}
+      </Grid>
 
-      {/* <Grid container spacing={3} sx={{ marginTop: 5 }}>
+      <Grid container spacing={3} sx={{ marginTop: 5 }}>
         <Grid item lg={6}>
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>
             Sort All surveys, can sort each column name individually
@@ -781,7 +775,7 @@ function FinalDeliverySection() {
           <Typography variant="body1">→ Pain point: </Typography>
         </Grid>
         <Grid item lg={6}></Grid>
-      </Grid> */}
+      </Grid>
     </>
   );
 }
