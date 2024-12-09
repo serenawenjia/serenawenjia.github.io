@@ -57,7 +57,7 @@ function SurveyEasyPage() {
           underline="always"
         >
           <Typography align="center" variant="h5" sx={{ fontWeight: "bold" }}>
-            Live website
+            Live Website
           </Typography>
         </Link>
 
@@ -143,7 +143,7 @@ function SurveyEasyPage() {
               <Link
                 component="button"
                 color="inherit"
-                underline="always"
+                underline="hover"
                 onClick={() =>
                   sectionRefs[0].current.scrollIntoView({ behavior: "smooth" })
                 }
@@ -163,7 +163,7 @@ function SurveyEasyPage() {
               <Link
                 component="button"
                 color="inherit"
-                underline="always"
+                underline="hover"
                 onClick={() =>
                   sectionRefs[1].current.scrollIntoView({ behavior: "smooth" })
                 }
@@ -184,7 +184,7 @@ function SurveyEasyPage() {
               <Link
                 component="button"
                 color="inherit"
-                underline="always"
+                underline="hover"
                 onClick={() =>
                   sectionRefs[2].current.scrollIntoView({ behavior: "smooth" })
                 }
@@ -205,7 +205,7 @@ function SurveyEasyPage() {
               <Link
                 component="button"
                 color="inherit"
-                underline="always"
+                underline="hover"
                 onClick={() =>
                   sectionRefs[3].current.scrollIntoView({ behavior: "smooth" })
                 }
@@ -224,7 +224,7 @@ function SurveyEasyPage() {
               <Link
                 component="button"
                 color="inherit"
-                underline="always"
+                underline="hover"
                 onClick={() =>
                   sectionRefs[4].current.scrollIntoView({ behavior: "smooth" })
                 }
@@ -667,41 +667,6 @@ function FinalDeliverySection() {
         </Link>
       </Stack>
 
-      <SmallHeader
-        sx={{
-          fontSize: 32,
-          marginTop: 15,
-          marginBottom: 5,
-          textAlign: "center",
-        }}
-      >
-        Demo
-      </SmallHeader>
-
-      <Grid container spacing={3}>
-        <Grid item lg={6}>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/-F4uANdtuWc"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </Grid>
-        <Grid item lg={6}>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/Yef0sYWpO1s"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </Grid>
-      </Grid>
       <SmallHeader>Key Features</SmallHeader>
 
       <SmallHeader>Researcher</SmallHeader>
@@ -826,6 +791,42 @@ function FinalDeliverySection() {
             Pain point: It's difficult to save the progress on a survey, then
             find it and continue later.
           </Typography>
+        </Grid>
+      </Grid>
+
+      <SmallHeader
+        sx={{
+          fontSize: 32,
+          marginTop: 15,
+          marginBottom: 5,
+          textAlign: "center",
+        }}
+      >
+        Demo
+      </SmallHeader>
+
+      <Grid container spacing={3}>
+        <Grid item lg={6}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/-F4uANdtuWc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </Grid>
+        <Grid item lg={6}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Yef0sYWpO1s"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </Grid>
       </Grid>
     </>
