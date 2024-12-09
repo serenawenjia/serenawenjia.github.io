@@ -120,23 +120,17 @@ function SurveyEasyPage() {
         </Fade>
       </Container>
 
-      <Fade bottom>
-        <Stack ref={sectionRefs[2]}>
-          <IdeateAndPrototypeSection />
-        </Stack>
-      </Fade>
+      <Stack ref={sectionRefs[2]}>
+        <IdeateAndPrototypeSection />
+      </Stack>
 
-      <Fade bottom>
-        <Container ref={sectionRefs[3]}>
-          <ArchitectureSection />
-        </Container>
-      </Fade>
+      <Container ref={sectionRefs[3]}>
+        <ArchitectureSection />
+      </Container>
 
-      <Fade bottom>
-        <Container ref={sectionRefs[4]}>
-          <FinalDeliverySection />
-        </Container>
-      </Fade>
+      <Container ref={sectionRefs[4]}>
+        <FinalDeliverySection />
+      </Container>
     </>
   );
 }
@@ -146,61 +140,68 @@ export default SurveyEasyPage;
 function IdeateAndPrototypeSection() {
   return (
     <>
-      <Container>
-        <BigHeader>Ideate & Prototype</BigHeader>
+      <Fade bottom>
+        <Container>
+          <BigHeader>Ideate & Prototype</BigHeader>
 
-        <SmallHeader>User Flow</SmallHeader>
-        <Stack alignItems="center">
-          <Image duration={0} src={userFlowImage} fit="contain" width="60%" />
-        </Stack>
-        <SmallHeader>Wireframe</SmallHeader>
-      </Container>
+          <SmallHeader>User Flow</SmallHeader>
+          <Stack alignItems="center">
+            <Image duration={0} src={userFlowImage} fit="contain" width="60%" />
+          </Stack>
+          <SmallHeader>Wireframe</SmallHeader>
+        </Container>
+      </Fade>
 
-      <Container>
+      <Fade bottom>
+        <Container>
+          <Grid container spacing={3}>
+            <Grid item lg={6}>
+              <Image duration={0} src={wireframe1} fit="contain" />
+            </Grid>
+            <Grid item lg={6}>
+              <Image duration={0} src={wireframe2} fit="contain" />
+            </Grid>
+          </Grid>
+        </Container>
+      </Fade>
+      <Fade bottom>
         <Grid container spacing={3}>
-          <Grid item lg={6}>
-            <Image duration={0} src={wireframe1} fit="contain" />
+          <Grid item lg={4}>
+            <Image duration={0} src={wireframe3} fit="contain" />
           </Grid>
-          <Grid item lg={6}>
-            <Image duration={0} src={wireframe2} fit="contain" />
+          <Grid item lg={4}>
+            <Image duration={0} src={wireframe4} fit="contain" />
+          </Grid>
+          <Grid item lg={4}>
+            <Image duration={0} src={wireframe5} fit="contain" />
           </Grid>
         </Grid>
-      </Container>
+      </Fade>
 
-      <Grid container spacing={3}>
-        <Grid item lg={4}>
-          <Image duration={0} src={wireframe3} fit="contain" />
-        </Grid>
-        <Grid item lg={4}>
-          <Image duration={0} src={wireframe4} fit="contain" />
-        </Grid>
-        <Grid item lg={4}>
-          <Image duration={0} src={wireframe5} fit="contain" />
-        </Grid>
-      </Grid>
+      <Fade bottom>
+        <Container>
+          <Grid container spacing={3} sx={{ marginTop: 5 }}>
+            <Grid item lg={6}>
+              <SmallHeader sx={{ marginTop: 0 }}>Design Style</SmallHeader>
+            </Grid>
+            <Grid item lg={6}>
+              <Typography variant="body1">
+                The main color we chose is McGill Red (#ED1B2F) and white that
+                aligns with the university's visual identity, and provides a
+                simple and clean view.
+              </Typography>
+              <Image duration={0} src={mcgill} fit="contain" height="60px" />
 
-      <Container>
-        <Grid container spacing={3} sx={{ marginTop: 5 }}>
-          <Grid item lg={6}>
-            <SmallHeader sx={{ marginTop: 0 }}>Design Style</SmallHeader>
+              <Typography variant="body1">
+                We used simple and easy-to-understand icons in the Bootstrap and
+                MUI libraries so that these icons are conveniently recognizable
+                at a glance by the user.
+              </Typography>
+              <br />
+            </Grid>
           </Grid>
-          <Grid item lg={6}>
-            <Typography variant="body1">
-              The main color we chose is McGill Red (#ED1B2F) and white that
-              aligns with the university's visual identity, and provides a
-              simple and clean view.
-            </Typography>
-            <Image duration={0} src={mcgill} fit="contain" height="60px" />
-
-            <Typography variant="body1">
-              We used simple and easy-to-understand icons in the Bootstrap and
-              MUI libraries so that these icons are conveniently recognizable at
-              a glance by the user.
-            </Typography>
-            <br />
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </Fade>
     </>
   );
 }
@@ -208,78 +209,84 @@ function IdeateAndPrototypeSection() {
 function ArchitectureSection() {
   return (
     <>
-      <BigHeader>Architecture</BigHeader>
-      <SmallHeader>Database Design (MongoDB w/ Mongoose)</SmallHeader>
-      <Image duration={0} src={database} fit="contain" />
+      <Fade bottom>
+        <BigHeader>Architecture</BigHeader>
+        <SmallHeader>Database Design (MongoDB w/ Mongoose)</SmallHeader>
+        <Image duration={0} src={database} fit="contain" />
+      </Fade>
 
-      <SmallHeader>API Design (Express.js)</SmallHeader>
-      <Typography>
-        We built REST APIs. We also API versioning to iteratively improve our
-        APIs. Here are a selection of APIs for users:
-      </Typography>
+      <Fade bottom>
+        <SmallHeader>API Design (Express.js)</SmallHeader>
+        <Typography>
+          We built REST APIs. We also API versioning to iteratively improve our
+          APIs. Here are a selection of APIs for users:
+        </Typography>
 
-      <TableContainer>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Method</TableCell>
-              <TableCell>Route</TableCell>
-              <TableCell>Description</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell>GET</TableCell>
-              <TableCell>/api/users/v2</TableCell>
-              <TableCell>
-                Query Users, optionally filter by firstName, lastName, email
-              </TableCell>
-            </TableRow>
+        <TableContainer>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Method</TableCell>
+                <TableCell>Route</TableCell>
+                <TableCell>Description</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>GET</TableCell>
+                <TableCell>/api/users/v2</TableCell>
+                <TableCell>
+                  Query Users, optionally filter by firstName, lastName, email
+                </TableCell>
+              </TableRow>
 
-            <TableRow>
-              <TableCell>GET</TableCell>
-              <TableCell>/api/users/v2/:id</TableCell>
-              <TableCell>Get User by ID</TableCell>
-            </TableRow>
+              <TableRow>
+                <TableCell>GET</TableCell>
+                <TableCell>/api/users/v2/:id</TableCell>
+                <TableCell>Get User by ID</TableCell>
+              </TableRow>
 
-            <TableRow>
-              <TableCell>POST</TableCell>
-              <TableCell>/api/users/v2/register</TableCell>
-              <TableCell>Register User</TableCell>
-            </TableRow>
+              <TableRow>
+                <TableCell>POST</TableCell>
+                <TableCell>/api/users/v2/register</TableCell>
+                <TableCell>Register User</TableCell>
+              </TableRow>
 
-            <TableRow>
-              <TableCell>POST</TableCell>
-              <TableCell>/api/users/v2/login</TableCell>
-              <TableCell>Login as User</TableCell>
-            </TableRow>
+              <TableRow>
+                <TableCell>POST</TableCell>
+                <TableCell>/api/users/v2/login</TableCell>
+                <TableCell>Login as User</TableCell>
+              </TableRow>
 
-            <TableRow>
-              <TableCell>POST</TableCell>
-              <TableCell>/api/users/v2/upload</TableCell>
-              <TableCell>Save multiple Users</TableCell>
-            </TableRow>
+              <TableRow>
+                <TableCell>POST</TableCell>
+                <TableCell>/api/users/v2/upload</TableCell>
+                <TableCell>Save multiple Users</TableCell>
+              </TableRow>
 
-            <TableRow>
-              <TableCell>DELETE</TableCell>
-              <TableCell>/api/users/v2/:id</TableCell>
-              <TableCell>Idempotent delete User by ID</TableCell>
-            </TableRow>
+              <TableRow>
+                <TableCell>DELETE</TableCell>
+                <TableCell>/api/users/v2/:id</TableCell>
+                <TableCell>Idempotent delete User by ID</TableCell>
+              </TableRow>
 
-            <TableRow>
-              <TableCell>PUT</TableCell>
-              <TableCell>/api/users/v2/:id</TableCell>
-              <TableCell>Update User info</TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-      </TableContainer>
+              <TableRow>
+                <TableCell>PUT</TableCell>
+                <TableCell>/api/users/v2/:id</TableCell>
+                <TableCell>Update User info</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Fade>
 
-      <SmallHeader>Web Architecture (React)</SmallHeader>
-      <Typography>
-        We used Bootstrap for responsive styling and MUI components. We used
-        React Query for data fetching, data mutations, and local caching.
-      </Typography>
+      <Fade bottom>
+        <SmallHeader>Web Architecture (React)</SmallHeader>
+        <Typography>
+          We used Bootstrap for responsive styling and MUI components. We used
+          React Query for data fetching, data mutations, and local caching.
+        </Typography>
+      </Fade>
     </>
   );
 }
@@ -287,17 +294,19 @@ function ArchitectureSection() {
 function FinalDeliverySection() {
   return (
     <>
-      <BigHeader>Final Delivery</BigHeader>
+      <Fade bottom>
+        <BigHeader>Final Delivery</BigHeader>
 
-      <iframe
-        width="1120"
-        height="730"
-        src="https://www.youtube.com/embed/kCIjidPASZc"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
+        <iframe
+          width="1120"
+          height="730"
+          src="https://www.youtube.com/embed/kCIjidPASZc"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </Fade>
     </>
   );
 }
