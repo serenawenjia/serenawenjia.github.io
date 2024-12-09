@@ -12,17 +12,18 @@ import Experience from "../../components/core-ui/experience/experience";
 import Skills from "../../components/core-ui/skills/skills";
 import { headerData } from "../../data/headerData";
 
-function HomePage() {
+function AboutPage() {
   return (
     <div>
       <Helmet>
         <title>{headerData.name} - Porfolio</title>
       </Helmet>
       <Navbar />
-      <Landing />
-      <Projects />
+      <About />
+      <Skills />
+      <Education />
     </div>
   );
 }
 
-export default HomePage;
+export default AboutPage;
