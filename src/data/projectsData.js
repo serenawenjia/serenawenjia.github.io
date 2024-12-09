@@ -1,8 +1,17 @@
 import surveyeasy from "../assets/images/surveyeasy/cover.png";
 import taManagement from "../assets/images/ta-management/cover.png";
 import cover598 from "../assets/images/598.gif";
+import ICI from "../ici/cover.svg";
 
 export const projectsData = [
+  {
+    projectName: "Case Study: Usability Approach for ICI Website",
+    projectDesc:
+      "Independent Curators International (ICI) is a non-profit arts organization that supports curators. ICI connects curators from across the world, and provides many resources, including fellowships, intensives, and seminars.",
+    tags: ["UX Research", "UI Design", "Moderated User Testing"],
+    demo: "/projects/ici",
+    image: ICI,
+  },
   {
     projectName: "Design & Development: TA Management Website",
     projectDesc:
@@ -24,8 +33,7 @@ export const projectsData = [
     projectDesc:
       "I performed data collection and data analysis on Twitter posts about COVID-19 and vaccination.",
     tags: ["Data Collection", "Data Analysis", "Data Visualization"],
-    demo:
-      "https://github.com/serenawenjia/comp598_finalProject/blob/main/comp598_final_report.pdf",
+    demo: "https://github.com/serenawenjia/comp598_finalProject/blob/main/comp598_final_report.pdf",
     image: cover598,
   },
   {
@@ -33,8 +41,7 @@ export const projectsData = [
     projectDesc:
       "Our team of 3 conducted data analysis and visualization on factors that contribute to movie score.",
     tags: ["Data Wrangling", "Data Analysis", "Data Visualization"],
-    demo:
-      "https://drive.google.com/file/d/1M8z_kwF8SL6QrlomBncDfBXHhUe_lPa_/view?usp=sharing",
+    demo: "https://drive.google.com/file/d/1M8z_kwF8SL6QrlomBncDfBXHhUe_lPa_/view?usp=sharing",
     image: undefined, // TODO
   },
 ];
