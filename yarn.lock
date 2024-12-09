@@ -6707,8 +6707,8 @@ ms@2.1.3, ms@^2.1.1:
 
 mui-image@^1.0.7:
   version "1.0.7"
-  resolved "http://devx-artifactory.build.rhinternal.net/artifactory/api/npm/npm/mui-image/-/mui-image-1.0.7.tgz#f665432d2cbf6140a34903b9a5143560ebd4df27"
-  integrity sha1-9mVDLSy/YUCjSQO5pRQ1YOvU3yc=
+  resolved "https://registry.yarnpkg.com/mui-image/-/mui-image-1.0.7.tgz#f665432d2cbf6140a34903b9a5143560ebd4df27"
+  integrity sha512-U79TWMKMfMC1ZiGnv/M+SaVJeUpubEjXOdy7w53RsvidUAMZ+4nW+QmDG9yg5fgWeYy6YJgLHyI9BHSDw76iIg==
 
 multicast-dns@^7.2.5:
   version "7.2.5"

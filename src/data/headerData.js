@@ -1,4 +1,4 @@
-import image from "../assets/images/wenjia.png";
+import image from "../assets/images/wenjia.jpg";
 
 export const headerData = {
   name: "Greetings, I am Wenjia Liu",

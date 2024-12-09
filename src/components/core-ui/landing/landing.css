@@ -30,11 +30,6 @@
   filter: grayscale(0%);
 }
 
-.landing--img:hover {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-
 .landing--container-left {
   flex: 35%;
   height: 100%;
