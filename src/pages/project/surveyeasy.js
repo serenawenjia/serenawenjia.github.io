@@ -31,6 +31,8 @@ import refine1Old from "../../assets/images/surveyeasy/refine-1-old.png";
 import refine1New from "../../assets/images/surveyeasy/refine-1-new.png";
 import refine2Old from "../../assets/images/surveyeasy/refine-2-old.png";
 import refine2New from "../../assets/images/surveyeasy/refine-2-new.png";
+import refine3Old from "../../assets/images/surveyeasy/refine-3-old.png";
+import refine3New from "../../assets/images/surveyeasy/refine-3-new.png";
 import cover from "../../assets/images/surveyeasy/cover.png";
 import wireframe from "../../assets/images/surveyeasy/lo-fi-wireframe.png";
 import leftDownArrow from "../../assets/images/left-down.png";
@@ -704,7 +706,7 @@ function ValidateSection() {
               Add a new functionality — "current filters," which allows
               participants to track/edit the current filters easily.
             </Typography>
-            <Stack direction="row" justifyContent="end">
+            <Stack direction="row" justifyContent="end" marginRight={3}>
               <Image
                 duration={0}
                 src={leftDownArrow}
@@ -735,7 +737,7 @@ function ValidateSection() {
               Show all surveys in a table instead of cards to clearly show
               information of created surveys
             </Typography>
-            <Stack direction="row" justifyContent="end">
+            <Stack direction="row" justifyContent="end" marginRight={3}>
               <Image
                 duration={0}
                 src={leftDownArrow}
@@ -754,17 +756,35 @@ function ValidateSection() {
       </Fade>
 
       <Fade bottom>
-        <Typography variant="h6" sx={{ fontWeight: "bold" }} marginTop={10}>
-          03
-        </Typography>
-        <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
-          Design Iteration | Participant's Take Survey
-        </Typography>
-        <Typography variant="h6">
-          Make the survey information (title and description) sticky at the top
-          of the page, which participants can always refer instead of having to
-          scroll to the top.
-        </Typography>
+        <Grid container alignItems="start" marginTop={10}>
+          <Grid item lg={7}>
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              03
+            </Typography>
+            <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+              Design Iteration | Participant's Take Survey
+            </Typography>
+            <Typography variant="h6">
+              Make the survey information (title and description) sticky at the
+              top of the page, which participants can always refer instead of
+              having to scroll to the top.
+            </Typography>
+            <Stack direction="row" justifyContent="end" marginRight={3}>
+              <Image
+                duration={0}
+                src={leftDownArrow}
+                fit="contain"
+                height="80px"
+                width="80px"
+                align="right"
+              />
+            </Stack>
+            <Image duration={0} src={refine3New} fit="contain" height="auto" />
+          </Grid>
+          <Grid item lg={5} marginTop={5}>
+            <Image duration={0} src={refine3Old} fit="contain" />
+          </Grid>
+        </Grid>
       </Fade>
 
       <Fade bottom>
