@@ -354,14 +354,13 @@ function EmpathizeAndDefineSection() {
           border: "1px solid black",
           borderRadius: 6,
           padding: 3,
-          marginBottom: 5,
+          marginBottom: 15,
         }}
       >
-        <Grid item lg={4}>
-          <Image duration={0} src={personaR} fit="contain" />
-        </Grid>
+        <Grid item lg={4}></Grid>
         <Grid item lg={8}>
-          <Typography gutterBottom variant="body1">
+          <Image duration={0} src={personaR} fit="contain" />
+          <Typography variant="body1" sx={{ marginBottom: 5 }}>
             Olivia is a postdoctoral research fellow of psychology at the
             University of Washington, Seattle. In her spare time, she also has a
             part-time job as math tutor for high school students and
@@ -374,7 +373,7 @@ function EmpathizeAndDefineSection() {
           <Typography variant="h6" sx={{ fontWeight: "bold" }} align="center">
             Personality Traits
           </Typography>
-          <Typography gutterBottom variant="body1" align="center">
+          <Typography variant="body1" align="center" sx={{ marginBottom: 10 }}>
             Hard-working, Self-confident, Friendly
           </Typography>
 
@@ -422,7 +421,7 @@ function EmpathizeAndDefineSection() {
           <Image duration={0} src={personaP} fit="contain" />
         </Grid>
         <Grid item xs={12} lg={8}>
-          <Typography gutterBottom variant="body1">
+          <Typography variant="body1" sx={{ marginBottom: 5 }}>
             Tristan is a 34-year-old middle-class man working in the manufacture
             industry. He lives with his wife in Louisville, Kentucky. He works a
             9 to 5 job and usually spends the night with family and friends. He
@@ -435,7 +434,7 @@ function EmpathizeAndDefineSection() {
           <Typography variant="h6" sx={{ fontWeight: "bold" }} align="center">
             Personality Traits
           </Typography>
-          <Typography gutterBottom variant="body1" align="center">
+          <Typography variant="body1" align="center" sx={{ marginBottom: 10 }}>
             Altruistic, Energetic, Curious
           </Typography>
 
@@ -606,7 +605,7 @@ function ValidateSection() {
           </Typography>
           <br />
           <Typography variant="body1">
-            I decided to use Roboto Font, as they are easily readable and ,
+            I decided to use Roboto Font, as they are easily readable.
           </Typography>
           <br />
           <Typography variant="body1">
@@ -631,6 +630,30 @@ function FinalDeliverySection() {
   return (
     <>
       <BigHeader>Final Delivery</BigHeader>
+
+      <Stack alignItems="center">
+        <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+          Try this website live:
+        </Typography>
+        <Link
+          href="https://surveyeasy-psql-mui-5016.fly.dev/"
+          color="inherit"
+          underline="always"
+        >
+          https://surveyeasy-psql-mui-5016.fly.dev/
+        </Link>
+      </Stack>
+
+      <SmallHeader
+        sx={{
+          fontSize: 32,
+          marginTop: 15,
+          marginBottom: 5,
+          textAlign: "center",
+        }}
+      >
+        Demo
+      </SmallHeader>
 
       <Grid container spacing={3}>
         <Grid item lg={6}>
