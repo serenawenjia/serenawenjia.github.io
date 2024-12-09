@@ -291,10 +291,19 @@ function DiscoverSection() {
       </Typography>
 
       <SmallHeader>Target Users</SmallHeader>
-      <Typography variant="body1">Primary User Group</Typography>
-      <Typography variant="body1">
+      <Typography variant="body1" sx={{ fontWeight: "bold" }} align="center">
+        Primary User Group
+      </Typography>
+      <Typography
+        variant="h6"
+        sx={{ fontWeight: "bold", color: "#bf9001" }}
+        align="center"
+      >
         Researchers, Students, People who like to get rewarded while helping the
-        others currently seeking for survey to post and fill out
+        others
+      </Typography>
+      <Typography variant="body1" align="center">
+        Currently seeking for survey to post and fill out
       </Typography>
 
       <SmallHeader>Survey & Interview</SmallHeader>
