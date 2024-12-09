@@ -16,8 +16,7 @@ export function SmallHeader({ children, sx }) {
   return (
     <Typography
       variant="h5"
-      gutterBottom
-      sx={{ fontWeight: "bold", marginTop: 5, ...sx }}
+      sx={{ fontWeight: "bold", marginBottom: 1, marginTop: 5, ...sx }}
     >
       {children}
     </Typography>

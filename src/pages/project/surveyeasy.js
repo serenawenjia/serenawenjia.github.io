@@ -33,6 +33,7 @@ import refine2Old from "../../assets/images/surveyeasy/refine-2-old.png";
 import refine2New from "../../assets/images/surveyeasy/refine-2-new.png";
 import cover from "../../assets/images/surveyeasy/cover.png";
 import wireframe from "../../assets/images/surveyeasy/lo-fi-wireframe.png";
+import leftDownArrow from "../../assets/images/left-down.png";
 import { BigHeader, SmallHeader } from "./components";
 
 function SurveyEasyPage() {
@@ -629,64 +630,65 @@ function ValidateSection() {
 
       <SmallHeader>Refine</SmallHeader>
 
-      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-        01
-      </Typography>
-      <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
-        Design Iteration | Participant's Dashboard
-      </Typography>
-      <Typography variant="h6">
-        Add a new functionality — "current filters," which allows participants
-        to track/edit the current filters easily.
-      </Typography>
-      <Grid container>
-        <Grid item lg={5.5}>
+      <Grid container alignItems="start" marginTop={2}>
+        <Grid item lg={7}>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            01
+          </Typography>
+          <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+            Design Iteration | Participant's Dashboard
+          </Typography>
+          <Typography variant="h6">
+            Add a new functionality — "current filters," which allows
+            participants to track/edit the current filters easily.
+          </Typography>
+          <Stack direction="row" justifyContent="end">
+            <Image
+              duration={0}
+              src={leftDownArrow}
+              fit="contain"
+              height="80px"
+              width="80px"
+              align="right"
+            />
+          </Stack>
+          <Image duration={0} src={refine1New} fit="contain" height="auto" />
+        </Grid>
+        <Grid item lg={5} marginTop={5}>
           <Image duration={0} src={refine1Old} fit="contain" />
         </Grid>
-        <Grid
-          item
-          lg={1}
-          display="flex"
-          justifyContent="start"
-          alignItems="center"
-        >
-          <AiOutlineArrowRight size={60} />
-        </Grid>
-        <Grid item lg={5.5}>
-          <Image duration={0} src={refine1New} fit="contain" />
-        </Grid>
       </Grid>
 
-      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-        02
-      </Typography>
-      <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
-        Design Iteration | Researcher's Survey History
-      </Typography>
-      <Typography variant="h6">
-        Show all surveys in a table instead of cards to clearly show information
-        of created surveys
-      </Typography>
-
-      <Grid container>
-        <Grid item lg={5.5}>
+      <Grid container alignItems="start" marginTop={10}>
+        <Grid item lg={7}>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            02
+          </Typography>
+          <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+            Design Iteration | Researcher's Survey History
+          </Typography>
+          <Typography variant="h6">
+            Show all surveys in a table instead of cards to clearly show
+            information of created surveys
+          </Typography>
+          <Stack direction="row" justifyContent="end">
+            <Image
+              duration={0}
+              src={leftDownArrow}
+              fit="contain"
+              height="80px"
+              width="80px"
+              align="right"
+            />
+          </Stack>
+          <Image duration={0} src={refine2New} fit="contain" height="auto" />
+        </Grid>
+        <Grid item lg={5} marginTop={5}>
           <Image duration={0} src={refine2Old} fit="contain" />
         </Grid>
-        <Grid
-          item
-          lg={1}
-          display="flex"
-          justifyContent="start"
-          alignItems="center"
-        >
-          <AiOutlineArrowRight size={60} />
-        </Grid>
-        <Grid item lg={5.5}>
-          <Image duration={0} src={refine2New} fit="contain" />
-        </Grid>
       </Grid>
 
-      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+      <Typography variant="h6" sx={{ fontWeight: "bold" }} marginTop={10}>
         03
       </Typography>
       <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
