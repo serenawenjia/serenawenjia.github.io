@@ -7,7 +7,7 @@ export const skillsData = [
   "CSS",
   "React",
   "Bootstrap",
-  "Typescript",
+  "TypeScript",
   "Git",
   "MongoDB",
   "PostgreSQL",
