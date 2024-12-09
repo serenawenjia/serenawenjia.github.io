@@ -1,8 +1,16 @@
-import { Container, Grid, Link, Stack, Typography } from "@mui/material";
+import {
+  Container,
+  CssBaseline,
+  Grid,
+  Link,
+  Stack,
+  Typography,
+} from "@mui/material";
 import Image from "mui-image";
 import React, { useRef } from "react";
 import { Helmet } from "react-helmet";
 import { Fade } from "react-reveal";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 import Navbar from "../../components/container/navbar";
 import questionnaireR from "../../assets/images/surveyeasy/questionnaire-r.png";
 import questionnaireP from "../../assets/images/surveyeasy/questionnaire-p.png";
@@ -17,21 +25,43 @@ import refine1New from "../../assets/images/surveyeasy/refine-1-new.png";
 import refine2Old from "../../assets/images/surveyeasy/refine-2-old.png";
 import refine2New from "../../assets/images/surveyeasy/refine-2-new.png";
 import cover from "../../assets/images/surveyeasy/cover.png";
-import leftDownArrow from "../../assets/images/left-down.png";
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import wireframe from "../../assets/images/surveyeasy/lo-fi-wireframe.png";
+import colorLight from "../../assets/images/surveyeasy/color-light.png";
+import colorDark from "../../assets/images/surveyeasy/color-dark.png";
+import roboto from "../../assets/images/surveyeasy/roboto.png";
+
+function BigHeader({ children, sx }) {
+  return (
+    <Typography
+      variant="h3"
+      sx={{ fontWeight: "bold", marginTop: 5, marginBottom: 5 }}
+    >
+      {children}
+    </Typography>
+  );
+}
+
+function SmallHeader({ children, sx }) {
+  return (
+    <Typography variant="h5" sx={{ fontWeight: "bold", marginTop: 5, ...sx }}>
+      {children}
+    </Typography>
+  );
+}
 
 function SurveyEasyPage() {
   const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
 
   return (
     <>
+      <CssBaseline />
       <Helmet>
         <title>Wenjia Liu | SurveyEasy</title>
       </Helmet>
       <Navbar />
 
       <Container>
-        <Image src={cover} fit="contain" duration={0} />
+        <Image duration={0} src={cover} fit="contain" />
 
         <Typography variant="h2" align="center" sx={{ fontWeight: "bold" }}>
           SurveyEasy
@@ -85,20 +115,20 @@ function SurveyEasyPage() {
             }}
             spacing={3}
           >
-            <Grid item xs={6} lg={3}>
+            <Grid item xs={6} lg={5}>
               <Typography variant="h4" sx={{ fontWeight: "bold" }} gutterBottom>
                 The Challenge
               </Typography>
-              <Typography variant="body1">
+              <Typography variant="h6">
                 How can we provide the most convenient survey platform for
                 researchers and participants alike?
               </Typography>
             </Grid>
-            <Grid item xs={12} lg={9}>
+            <Grid item xs={12} lg={7}>
               <Typography variant="h4" sx={{ fontWeight: "bold" }} gutterBottom>
                 Project Goal
               </Typography>
-              <Typography variant="body1">
+              <Typography variant="h6">
                 Design and implement a website that is easy-to-use for both
                 researchers and survey participants. Specifically, for
                 researchers, the website makes the process of designing and
@@ -112,10 +142,8 @@ function SurveyEasyPage() {
         </Fade>
       </Container>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }}>
-          <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-            Process
-          </Typography>
+        <Container>
+          <BigHeader>Process</BigHeader>
           <Grid container>
             <Grid item xs={6} lg={12 / 5}>
               <Link
@@ -221,27 +249,27 @@ function SurveyEasyPage() {
         </Container>
       </Fade>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }} ref={sectionRefs[0]}>
+        <Container ref={sectionRefs[0]}>
           <DiscoverSection />
         </Container>
       </Fade>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }} ref={sectionRefs[1]}>
+        <Container ref={sectionRefs[1]}>
           <EmpathizeAndDefineSection />
         </Container>
       </Fade>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }} ref={sectionRefs[2]}>
+        <Container ref={sectionRefs[2]}>
           <IdeateAndPrototypeSection />
         </Container>
       </Fade>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }} ref={sectionRefs[3]}>
+        <Container ref={sectionRefs[3]}>
           <ValidateSection />
         </Container>
       </Fade>
       <Fade bottom>
-        <Container sx={{ marginTop: 5 }} ref={sectionRefs[4]}>
+        <Container ref={sectionRefs[4]}>
           <FinalDeliverySection />
         </Container>
       </Fade>
@@ -254,30 +282,22 @@ export default SurveyEasyPage;
 function DiscoverSection() {
   return (
     <>
-      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-        Discover
-      </Typography>
+      <BigHeader>Discover</BigHeader>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Research Methods
-      </Typography>
+      <SmallHeader>Research Methods</SmallHeader>
       <Typography variant="body1">
         In order to better understand the users, I started user research by
         surveys and interviews.
       </Typography>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Target Users
-      </Typography>
+      <SmallHeader>Target Users</SmallHeader>
       <Typography variant="body1">Primary User Group</Typography>
       <Typography variant="body1">
         Researchers, Students, People who like to get rewarded while helping the
         others currently seeking for survey to post and fill out
       </Typography>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Survey & Interview
-      </Typography>
+      <SmallHeader>Survey & Interview</SmallHeader>
       <Typography variant="body1">
         I conducted an online survey of 38 potential users to understand their
         desires and challenges they faced when they post surveys and fill out
@@ -286,10 +306,10 @@ function DiscoverSection() {
 
       <Grid container spacing={3}>
         <Grid item xs={6}>
-          <Image src={questionnaireR} fit="contain" />
+          <Image duration={0} src={questionnaireR} fit="contain" />
         </Grid>
         <Grid item xs={6}>
-          <Image src={questionnaireP} fit="contain" />
+          <Image duration={0} src={questionnaireP} fit="contain" />
         </Grid>
       </Grid>
     </>
@@ -299,20 +319,25 @@ function DiscoverSection() {
 function EmpathizeAndDefineSection() {
   return (
     <>
-      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-        Empathize & Define
-      </Typography>
+      <BigHeader>Empathize & Define</BigHeader>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        User Persona
-      </Typography>
+      <SmallHeader sx={{ marginBottom: 5 }}>User Persona</SmallHeader>
 
-      <Grid container spacing={3}>
-        <Grid item xs={12} lg={4}>
-          <Image src={personaR} fit="contain" />
+      <Grid
+        container
+        spacing={3}
+        sx={{
+          border: "1px solid black",
+          borderRadius: 6,
+          padding: 3,
+          marginBottom: 5,
+        }}
+      >
+        <Grid item lg={4}>
+          <Image duration={0} src={personaR} fit="contain" />
         </Grid>
-        <Grid item xs={12} lg={8}>
-          <Typography variant="body1">
+        <Grid item lg={8}>
+          <Typography gutterBottom variant="body1">
             Olivia is a postdoctoral research fellow of psychology at the
             University of Washington, Seattle. In her spare time, she also has a
             part-time job as math tutor for high school students and
@@ -325,7 +350,7 @@ function EmpathizeAndDefineSection() {
           <Typography variant="h6" sx={{ fontWeight: "bold" }} align="center">
             Personality Traits
           </Typography>
-          <Typography variant="body1" align="center">
+          <Typography gutterBottom variant="body1" align="center">
             Hard-working, Self-confident, Friendly
           </Typography>
 
@@ -360,12 +385,20 @@ function EmpathizeAndDefineSection() {
         </Grid>
       </Grid>
 
-      <Grid container spacing={3}>
+      <Grid
+        container
+        spacing={3}
+        sx={{
+          border: "1px solid black",
+          borderRadius: 6,
+          padding: 3,
+        }}
+      >
         <Grid item xs={12} lg={4}>
-          <Image src={personaP} fit="contain" />
+          <Image duration={0} src={personaP} fit="contain" />
         </Grid>
         <Grid item xs={12} lg={8}>
-          <Typography variant="body1">
+          <Typography gutterBottom variant="body1">
             Tristan is a 34-year-old middle-class man working in the manufacture
             industry. He lives with his wife in Louisville, Kentucky. He works a
             9 to 5 job and usually spends the night with family and friends. He
@@ -378,7 +411,7 @@ function EmpathizeAndDefineSection() {
           <Typography variant="h6" sx={{ fontWeight: "bold" }} align="center">
             Personality Traits
           </Typography>
-          <Typography variant="body1" align="center">
+          <Typography gutterBottom variant="body1" align="center">
             Altruistic, Energetic, Curious
           </Typography>
 
@@ -415,10 +448,10 @@ function EmpathizeAndDefineSection() {
         </Grid>
       </Grid>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Empathy Map
-      </Typography>
-      <Image src={empathyMapP} fit="contain" />
+      <SmallHeader>Empathy Map</SmallHeader>
+      <Stack alignItems="center">
+        <Image duration={0} src={empathyMapP} fit="contain" width="60%" />
+      </Stack>
     </>
   );
 }
@@ -426,19 +459,14 @@ function EmpathizeAndDefineSection() {
 function IdeateAndPrototypeSection() {
   return (
     <>
-      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-        Ideate & Prototype
-      </Typography>
+      <BigHeader>Ideate & Prototype</BigHeader>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        User Flow
-      </Typography>
-      <Image src={userFlowImage} fit="contain" />
-
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Low-Fidelity Wireframe
-      </Typography>
-      <Image src={userFlowImage} fit="contain" />
+      <SmallHeader>User Flow</SmallHeader>
+      <Stack alignItems="center">
+        <Image duration={0} src={userFlowImage} fit="contain" width="60%" />
+      </Stack>
+      <SmallHeader>Low-Fidelity Wireframe</SmallHeader>
+      <Image duration={0} src={wireframe} fit="contain" />
     </>
   );
 }
@@ -446,42 +474,37 @@ function IdeateAndPrototypeSection() {
 function ValidateSection() {
   return (
     <>
-      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-        Validate
-      </Typography>
-
-      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-        Validate
-      </Typography>
+      <BigHeader>Validate</BigHeader>
 
       <Grid container spacing={3}>
         <Grid item lg={6}>
-          <Stack direction="row">
-            <Image src={validateR} fit="contain" width="20%" />
+          <Stack direction="row" justifyContent="center">
+            <Image duration={0} src={validateR} fit="contain" width="20%" />
           </Stack>
-          <Typography variant="body1">
+          <Typography variant="body1" sx={{ marginTop: 2 }}>
             1 student participant who usually need to conduct survey and analyze
             the survey result for his research project (In person)
           </Typography>
         </Grid>
         <Grid item lg={6}>
-          <Stack direction="row">
-            <Image src={validateP} fit="contain" width="20%" />
-            <Image src={validateP} fit="contain" width="20%" />
+          <Stack direction="row" justifyContent="center">
+            <Image duration={0} src={validateP} fit="contain" width="20%" />
+            <Image duration={0} src={validateP} fit="contain" width="20%" />
           </Stack>
-          <Typography variant="body1">
+          <Typography variant="body1" sx={{ marginTop: 2 }}>
             2 workers who like to do some paid survey in their free time (Via
             zoom)
           </Typography>
         </Grid>
       </Grid>
 
-      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-        Refine
-      </Typography>
+      <SmallHeader>Refine</SmallHeader>
 
+      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+        01
+      </Typography>
       <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
-        1. Design Iteration | Participant Home Page
+        Design Iteration | Participant Home Page
       </Typography>
       <Typography variant="body1">
         Add a new function — ‘current filters’, which allows the users to
@@ -489,7 +512,7 @@ function ValidateSection() {
       </Typography>
       <Grid container>
         <Grid item lg={5.5}>
-          <Image src={refine1New} fit="contain" />
+          <Image duration={0} src={refine1New} fit="contain" />
         </Grid>
         <Grid
           item
@@ -501,12 +524,15 @@ function ValidateSection() {
           <AiOutlineArrowLeft size={60} />
         </Grid>
         <Grid item lg={5.5}>
-          <Image src={refine1Old} fit="contain" />
+          <Image duration={0} src={refine1Old} fit="contain" />
         </Grid>
       </Grid>
 
-      <Typography variant="h6">
-        2: show all surveys in the table instead of card component
+      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+        02
+      </Typography>
+      <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+        Show all surveys in the table instead of card component
       </Typography>
       <Typography variant="body1">
         → Pain point: hard to organize all survey (A clear-cut organizational
@@ -515,7 +541,7 @@ function ValidateSection() {
 
       <Grid container>
         <Grid item lg={5.5}>
-          <Image src={refine2New} fit="contain" />
+          <Image duration={0} src={refine2New} fit="contain" />
         </Grid>
         <Grid
           item
@@ -527,9 +553,52 @@ function ValidateSection() {
           <AiOutlineArrowLeft size={60} />
         </Grid>
         <Grid item lg={5.5}>
-          <Image src={refine2Old} fit="contain" />
+          <Image duration={0} src={refine2Old} fit="contain" />
         </Grid>
       </Grid>
+
+      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+        03
+      </Typography>
+      <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+        Make the survey description stick on the pages, instead of scrolling
+        down with the survey questions.
+      </Typography>
+      <Typography variant="body1">
+        → Pain point: hard to scroll back to the top of page
+      </Typography>
+
+      <Grid container spacing={3} sx={{ marginTop: 5 }}>
+        <Grid item lg={6}>
+          <SmallHeader sx={{ marginTop: 0 }}>Design Style</SmallHeader>
+        </Grid>
+        <Grid item lg={6}>
+          <Typography variant="body1">
+            I used Light grayish orange & Dark blue as the main color of the
+            entire website. The tenderness hue introduces warmth that balances
+            the cool depth of Dark blue. The combination of these two
+            complementary colors shows a high level of contrast, which makes
+            them much easier for an observer to see.
+          </Typography>
+          <br />
+          <Typography variant="body1">
+            I decided to use Roboto Font, as they are easily readable and ,
+          </Typography>
+          <br />
+          <Typography variant="body1">
+            I used basic and simple icons. I would like to make sure these icons
+            are accessible for users without any confusion.
+          </Typography>
+        </Grid>
+      </Grid>
+
+      <Stack direction="row" height={100} justifyContent="center">
+        <Image duration={0} src={colorLight} width="10%" />
+        <Image duration={0} src={colorDark} width="10%" />
+      </Stack>
+      <Stack direction="row" justifyContent="center">
+        <Image duration={0} src={roboto} width="50%" />
+      </Stack>
     </>
   );
 }
@@ -537,9 +606,53 @@ function ValidateSection() {
 function FinalDeliverySection() {
   return (
     <>
-      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-        Final Delivery
-      </Typography>
+      <BigHeader>Final Delivery</BigHeader>
+      <SmallHeader>Key Features</SmallHeader>
+
+      <Grid container spacing={3} sx={{ marginTop: 5 }}>
+        <Grid item lg={6}>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Filter
+          </Typography>
+
+          <Typography variant="body1">
+            01. (Two Advantages: one for filtering surveys, the other one for
+            quick filter participants with only a few clicks while creating
+            surveys. Function: eliminate mismatch)
+          </Typography>
+
+          <Typography variant="body1">
+            → Pain point: Take long time for selecting a preferred survey
+          </Typography>
+        </Grid>
+        <Grid item lg={6}></Grid>
+      </Grid>
+
+      <Grid container spacing={3} sx={{ marginTop: 5 }}>
+        <Grid item lg={6}>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Sort All surveys, can sort each column name individually
+          </Typography>
+
+          <Typography variant="body1"></Typography>
+
+          <Typography variant="body1">→ Pain point: </Typography>
+        </Grid>
+        <Grid item lg={6}></Grid>
+      </Grid>
+
+      <Grid container spacing={3} sx={{ marginTop: 5 }}>
+        <Grid item lg={6}>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Automatic analysis of survey results (counting, visualization)
+          </Typography>
+
+          <Typography variant="body1"></Typography>
+
+          <Typography variant="body1">→ Pain point: </Typography>
+        </Grid>
+        <Grid item lg={6}></Grid>
+      </Grid>
     </>
   );
 }
