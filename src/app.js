@@ -17,6 +17,7 @@ import HomePage from "./pages/home";
 import ProjectPage from "./pages/project";
 import SurveyEasyPage from "./pages/project/surveyeasy";
 import TAManagementPage from "./pages/project/taManagement";
+import ICIPage from "./ici/ICI";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -39,6 +40,7 @@ function App() {
               element={<SurveyEasyPage />}
               exact
             />
+            <Route path="/projects/ici" element={<ICIPage />} exact />
             <Route
               path="/projects/ta-management"
               element={<TAManagementPage />}
