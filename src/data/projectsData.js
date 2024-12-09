@@ -5,7 +5,7 @@ export const projectsData = [
   {
     projectName: "Design & Development: TA Management Website",
     projectDesc:
-      "This project is about designing and implementing a TA management system for McGill University's School of Computer Science",
+      "I designed and implemented a TA management system for McGill University's School of Computer Science, as the leader of a team of 3.",
     tags: ["Web Design", "Database Design", "Web Development"],
     demo: "/projects/ta-management",
     image: taManagement,
@@ -13,8 +13,8 @@ export const projectsData = [
   {
     projectName: "Research, Design, & Development: SurveyEasy Website",
     projectDesc:
-      "This project is about designing and implementing a website that is easy-to-use for both researchers and survey participants.",
-    tags: ["UX Research", "Product Design", "Web Development"], // 写role 还是用到的工具？
+      "I researched, designed, and implemented a survey platform that is easy-to-use for both researchers and survey participants.",
+    tags: ["UX Research", "Product Design", "Web Development"],
     demo: "/projects/surveyeasy",
     image: surveyeasy,
   },
