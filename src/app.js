@@ -14,6 +14,7 @@ import { ThemeContext } from "./contexts/theme-context";
 import AboutPage from "./pages/about";
 import HomePage from "./pages/home";
 import ProjectPage from "./pages/project";
+import SurveyEasyPage from "./pages/project/surveyeasy";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -26,6 +27,11 @@ function App() {
           <Route path="/" element={<HomePage />} exact />
           <Route path="/about" element={<AboutPage />} exact />
           <Route path="/projects" element={<ProjectPage />} exact />
+          <Route
+            path="/projects/surveyeasy"
+            element={<SurveyEasyPage />}
+            exact
+          />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>
