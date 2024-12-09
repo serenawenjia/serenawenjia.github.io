@@ -34,7 +34,7 @@ function BigHeader({ children, sx }) {
   return (
     <Typography
       variant="h3"
-      sx={{ fontWeight: "bold", marginTop: 5, marginBottom: 5 }}
+      sx={{ fontWeight: "bold", marginTop: 5, marginBottom: 5, ...sx }}
     >
       {children}
     </Typography>
@@ -43,7 +43,11 @@ function BigHeader({ children, sx }) {
 
 function SmallHeader({ children, sx }) {
   return (
-    <Typography variant="h5" sx={{ fontWeight: "bold", marginTop: 5, ...sx }}>
+    <Typography
+      variant="h5"
+      gutterBottom
+      sx={{ fontWeight: "bold", marginTop: 5, ...sx }}
+    >
       {children}
     </Typography>
   );
@@ -357,9 +361,10 @@ function EmpathizeAndDefineSection() {
           marginBottom: 15,
         }}
       >
-        <Grid item lg={4}></Grid>
-        <Grid item lg={8}>
+        <Grid item lg={4}>
           <Image duration={0} src={personaR} fit="contain" />
+        </Grid>
+        <Grid item lg={8}>
           <Typography variant="body1" sx={{ marginBottom: 5 }}>
             Olivia is a postdoctoral research fellow of psychology at the
             University of Washington, Seattle. In her spare time, she also has a
@@ -506,7 +511,7 @@ function ValidateSection() {
           </Stack>
           <Typography variant="body1" sx={{ marginTop: 2 }}>
             1 student participant who usually need to conduct survey and analyze
-            the survey result for his research project (In person)
+            the survey result for his research project (in person)
           </Typography>
         </Grid>
         <Grid item lg={6}>
@@ -517,6 +522,55 @@ function ValidateSection() {
           <Typography variant="body1" sx={{ marginTop: 2 }}>
             2 workers who like to do some paid survey in their free time (Via
             zoom)
+          </Typography>
+        </Grid>
+      </Grid>
+
+      <SmallHeader>Objectives</SmallHeader>
+      <Typography variant="h6">
+        1. Do the interactions make sense to the users?
+      </Typography>
+      <Typography variant="h6">
+        2. Are there any crucial processes or features that we overlooked?
+      </Typography>
+
+      <SmallHeader>Tasks</SmallHeader>
+      <Typography variant="h6">
+        1. You want to find a survey to fill out based on your preference. What
+        steps would you take to accomplish this?
+      </Typography>
+      <Typography variant="h6">
+        2. You want to create a survey and get responses from the participants
+        who satisfy their requirements. What steps would you take to accomplish
+        this?
+      </Typography>
+
+      <SmallHeader>Key Takeaways</SmallHeader>
+      <Grid container spacing={3}>
+        <Grid item lg={4} display="flex" direction="column" alignItems="center">
+          <Typography variant="h3" sx={{ fontWeight: "bold", marginTop: 5 }}>
+            100%
+          </Typography>
+          <Typography variant="h6" align="center">
+            participants liked the step-by-step instructions and the exam-like
+            layout
+          </Typography>
+        </Grid>
+        <Grid item lg={4} display="flex" direction="column" alignItems="center">
+          <Typography variant="h3" sx={{ fontWeight: "bold", marginTop: 5 }}>
+            50%
+          </Typography>
+          <Typography variant="h6" align="center">
+            participants had confusion about the currently applied filter
+          </Typography>
+        </Grid>
+        <Grid item lg={4} display="flex" direction="column" alignItems="center">
+          <Typography variant="h3" sx={{ fontWeight: "bold", marginTop: 5 }}>
+            100%
+          </Typography>
+          <Typography variant="h6" align="center">
+            researchers would like to preview the survey while editing as
+            participants would see it
           </Typography>
         </Grid>
       </Grid>
@@ -597,15 +651,15 @@ function ValidateSection() {
         </Grid>
         <Grid item lg={6}>
           <Typography variant="body1">
-            I used Light grayish orange & Dark blue as the main color of the
+            I used light grayish orange & dark blue as the main color of the
             entire website. The tenderness hue introduces warmth that balances
-            the cool depth of Dark blue. The combination of these two
+            the cool depth of dark blue. The combination of these two
             complementary colors shows a high level of contrast, which makes
             them much easier for an observer to see.
           </Typography>
           <br />
           <Typography variant="body1">
-            I decided to use Roboto Font, as they are easily readable.
+            I decided to use Roboto font, as they are easily readable.
           </Typography>
           <br />
           <Typography variant="body1">

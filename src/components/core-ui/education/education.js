@@ -22,6 +22,7 @@ function Education() {
               <EducationCard
                 key={edu.id}
                 id={edu.id}
+                location={edu.location}
                 institution={edu.institution}
                 course={edu.course}
                 startYear={edu.startYear}
