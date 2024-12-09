@@ -234,6 +234,7 @@ function SurveyEasyPage() {
                 </Typography>
               </Link>
               <Typography variant="body1">Usability Testing</Typography>
+              <Typography variant="body1">Test Results Analysis</Typography>
             </Grid>
             <Grid item xs={6} lg={12 / 5}>
               <Link
@@ -253,6 +254,8 @@ function SurveyEasyPage() {
                 </Typography>
               </Link>
               <Typography variant="body1">Key Features</Typography>
+              <Typography variant="body1">Design Refining</Typography>
+              <Typography variant="body1">Demo</Typography>
             </Grid>
           </Grid>
         </Container>
@@ -856,7 +859,7 @@ function FinalDeliverySection() {
               01
             </Typography>
             <Typography variant="h6">
-              Filters allows researcher to filter for eligible paticipants by
+              Filters allows researcher to filter for eligible participants by
               age, country, gender, etc.
             </Typography>
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>

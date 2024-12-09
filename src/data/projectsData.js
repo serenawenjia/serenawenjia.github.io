@@ -20,12 +20,19 @@ export const projectsData = [
     image: surveyeasy,
   },
   {
-    projectName:
-      "Data Analysis: COVID and Vaccination Hesitancy as Viewed by Social Media",
+    projectName: "Data Analysis in Python: COVID on Twitter",
     projectDesc:
       "I performed data collection and data analysis on Twitter posts about COVID-19 and vaccination.",
     tags: ["Data Collection", "Data Analysis", "Data Visualization"],
     demo: "https://github.com/serenawenjia/comp598_finalProject/blob/main/comp598_final_report.pdf",
     image: cover598,
+  },
+  {
+    projectName: "Data Analysis and Visualization in R: Movie Score Analysis",
+    projectDesc:
+      "Our team of 3 conducted data analysis and visualization on movie data and factors that contribute to their score.",
+    tags: ["Data Wrangling", "Data Analysis", "Data Visualization"],
+    demo: "",
+    image: undefined,
   },
 ];
