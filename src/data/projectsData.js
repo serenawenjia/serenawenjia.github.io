@@ -11,17 +11,17 @@ export const projectsData = [
   {
     // TODO
     id: 1,
-    projectName: "Ayla Networks",
+    projectName: "Research, Design, & Development: SurveyEasy Website",
     projectDesc:
-      "This project about Simplifying the Development of Smart Home & IoT Solutions.",
-    tags: ["React", "SAAS", "React Bootstrap"],
+      "This project is about to design and implement a website that is easy-to-use for both researchers and survey participants.",
+    tags: ["Figma", "React", ""], // 写role 还是用到的工具？
     code: "",
     demo: "https://www.aylanetworks.com/",
     image: six,
   },
   {
     id: 2,
-    projectName: "Jewelry Niche",
+    projectName: "SOCS website for McGill University",
     projectDesc:
       "This project is a Jewelry shop, Customer can be buy product and manage them and make payment.",
     tags: ["React", "Express", "Material Ui"],
