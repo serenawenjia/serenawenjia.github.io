@@ -5,7 +5,7 @@ export function BigHeader({ children, sx }) {
   return (
     <Typography
       variant="h3"
-      sx={{ fontWeight: "bold", marginTop: 5, marginBottom: 5, ...sx }}
+      sx={{ fontWeight: "bold", marginTop: 15, marginBottom: 5, ...sx }}
     >
       {children}
     </Typography>

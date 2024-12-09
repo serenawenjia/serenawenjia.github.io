@@ -5,6 +5,12 @@ import {
   Grid,
   Link,
   Stack,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
   Typography,
 } from "@mui/material";
 import Image from "mui-image";
@@ -464,6 +470,68 @@ function EmpathizeAndDefineSection() {
       <Stack alignItems="center">
         <Image duration={0} src={empathyMapP} fit="contain" width="60%" />
       </Stack>
+
+      <SmallHeader>Pain Points & Solutions</SmallHeader>
+
+      <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>User Role</TableCell>
+              <TableCell>Pain Points</TableCell>
+              <TableCell>Solutions</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell rowSpan={4}>Researcher</TableCell>
+              <TableCell>
+                Some responses are from ineligible participants
+              </TableCell>
+              <TableCell>Allow setting requirement for participants</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                It’s hard to get enough response from the target audience
+              </TableCell>
+              <TableCell>
+                Push notifications to eligible participants and allow setting
+                rewards as an incentive
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                Analysis and visualization of results require coding
+              </TableCell>
+              <TableCell>
+                Automatic data visualization when viewing responses
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Cannot find past surveys easily</TableCell>
+              <TableCell>
+                Dedicated page with sortable table of past surveys
+              </TableCell>
+            </TableRow>
+
+            <TableRow>
+              <TableCell rowSpan={2}>Participant</TableCell>
+              <TableCell>Difficulty finding interesting surveys</TableCell>
+              <TableCell>
+                Filter by category, duration, etc. and search by keywords
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                Difficulty saving the progress and finding it to continue later
+              </TableCell>
+              <TableCell>
+                Allow saving drafts and dedicated page for all drafts
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
     </>
   );
 }
@@ -678,7 +746,7 @@ function FinalDeliverySection() {
 
       <SmallHeader>Key Features</SmallHeader>
 
-      <SmallHeader>Researcher</SmallHeader>
+      <SmallHeader>Researcher Mode</SmallHeader>
 
       <Grid container spacing={3} sx={{ marginTop: 5 }}>
         <Grid item lg={6}>
@@ -766,7 +834,7 @@ function FinalDeliverySection() {
         </Grid>
       </Grid>
 
-      <SmallHeader>Participant</SmallHeader>
+      <SmallHeader>Participant Mode</SmallHeader>
 
       <Grid container spacing={3} sx={{ marginTop: 5 }}>
         <Grid item lg={6}>
