@@ -18,4 +18,13 @@ export const projectsData = [
     demo: "/projects/surveyeasy",
     image: surveyeasy,
   },
+  {
+    projectName:
+      "Data Analysis: COVID and Vaccination Hesitancy as Viewed by Social Media",
+    projectDesc:
+      "I performed data collection and data analysis on Twitter posts about COVID-19 and vaccination.",
+    tags: ["Data Collection", "Data Analysis", "Data Visualization"],
+    demo: "https://github.com/serenawenjia/comp598_finalProject/blob/main/comp598_final_report.pdf",
+    image: undefined, // TODO
+  },
 ];

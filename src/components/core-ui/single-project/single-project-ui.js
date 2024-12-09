@@ -16,9 +16,14 @@ function SingleProjectUI({
   theme,
   classes,
 }) {
+  const linkProps = demo.startsWith("http") && {
+    target: "_blank",
+    rel: "noreferrer",
+  };
+
   return (
     <Fade bottom>
-      <Link to={demo}>
+      <a href={demo} {...linkProps}>
         <div
           key={id}
           className="singleProject"
@@ -61,7 +66,7 @@ function SingleProjectUI({
             ))}
           </div>
         </div>
-      </Link>
+      </a>
     </Fade>
   );
 }
