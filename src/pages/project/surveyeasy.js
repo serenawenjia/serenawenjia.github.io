@@ -10,7 +10,7 @@ import Image from "mui-image";
 import React, { useRef } from "react";
 import { Helmet } from "react-helmet";
 import { Fade } from "react-reveal";
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import Navbar from "../../components/container/navbar";
 import questionnaireR from "../../assets/images/surveyeasy/questionnaire-r.png";
 import questionnaireP from "../../assets/images/surveyeasy/questionnaire-p.png";
@@ -521,19 +521,19 @@ function ValidateSection() {
       </Typography>
       <Grid container>
         <Grid item lg={5.5}>
-          <Image duration={0} src={refine1New} fit="contain" />
+          <Image duration={0} src={refine1Old} fit="contain" />
         </Grid>
         <Grid
           item
           lg={1}
           display="flex"
-          justifyContent="end"
+          justifyContent="start"
           alignItems="center"
         >
-          <AiOutlineArrowLeft size={60} />
+          <AiOutlineArrowRight size={60} />
         </Grid>
         <Grid item lg={5.5}>
-          <Image duration={0} src={refine1Old} fit="contain" />
+          <Image duration={0} src={refine1New} fit="contain" />
         </Grid>
       </Grid>
 
@@ -550,19 +550,19 @@ function ValidateSection() {
 
       <Grid container>
         <Grid item lg={5.5}>
-          <Image duration={0} src={refine2New} fit="contain" />
+          <Image duration={0} src={refine2Old} fit="contain" />
         </Grid>
         <Grid
           item
           lg={1}
           display="flex"
-          justifyContent="end"
+          justifyContent="start"
           alignItems="center"
         >
-          <AiOutlineArrowLeft size={60} />
+          <AiOutlineArrowRight size={60} />
         </Grid>
         <Grid item lg={5.5}>
-          <Image duration={0} src={refine2Old} fit="contain" />
+          <Image duration={0} src={refine2New} fit="contain" />
         </Grid>
       </Grid>
 
@@ -601,13 +601,13 @@ function ValidateSection() {
         </Grid>
       </Grid>
 
-      <Stack direction="row" height={100} justifyContent="center">
+      {/* <Stack direction="row" height={100} justifyContent="center">
         <Image duration={0} src={colorLight} width="10%" />
         <Image duration={0} src={colorDark} width="10%" />
       </Stack>
       <Stack direction="row" justifyContent="center">
         <Image duration={0} src={roboto} width="50%" />
-      </Stack>
+      </Stack> */}
     </>
   );
 }

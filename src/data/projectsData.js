@@ -10,4 +10,13 @@ export const projectsData = [
     demo: "/projects/surveyeasy",
     image: surveyeasy,
   },
+  {
+    id: 2,
+    projectName: "Design & Development: TA Management Website",
+    projectDesc:
+      "This project is about designing and implementing a TA management system for McGill University's School of Computer Science",
+    tags: ["Web Design", "Database Design", "Web Development"],
+    demo: "/projects/ta-management",
+    image: "",
+  },
 ];
