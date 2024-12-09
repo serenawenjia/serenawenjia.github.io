@@ -1,5 +1,6 @@
 import surveyeasy from "../assets/images/surveyeasy/cover.png";
 import taManagement from "../assets/images/ta-management/cover.png";
+import cover598 from "../assets/images/598.gif";
 
 export const projectsData = [
   {
@@ -25,6 +26,6 @@ export const projectsData = [
       "I performed data collection and data analysis on Twitter posts about COVID-19 and vaccination.",
     tags: ["Data Collection", "Data Analysis", "Data Visualization"],
     demo: "https://github.com/serenawenjia/comp598_finalProject/blob/main/comp598_final_report.pdf",
-    image: undefined, // TODO
+    image: cover598,
   },
 ];

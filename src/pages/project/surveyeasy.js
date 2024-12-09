@@ -17,7 +17,6 @@ import Image from "mui-image";
 import React, { useRef } from "react";
 import { Helmet } from "react-helmet";
 import { Fade } from "react-reveal";
-import { AiOutlineArrowRight } from "react-icons/ai";
 import Navbar from "../../components/container/navbar";
 import questionnaireR from "../../assets/images/surveyeasy/questionnaire-r.png";
 import questionnaireP from "../../assets/images/surveyeasy/questionnaire-p.png";
@@ -37,6 +36,12 @@ import cover from "../../assets/images/surveyeasy/cover.png";
 import wireframe from "../../assets/images/surveyeasy/lo-fi-wireframe.png";
 import leftDownArrow from "../../assets/images/left-down.png";
 import { BigHeader, SmallHeader } from "./components";
+import deliveryResearcherFilter from "../../assets/images/surveyeasy/delivery-researcher-filter.gif";
+import deliveryPreview from "../../assets/images/surveyeasy/delivery-preview.gif";
+import deliverySurveys from "../../assets/images/surveyeasy/delivery-surveys.gif";
+import deliveryParticipantFilter from "../../assets/images/surveyeasy/delivery-participant-filter.gif";
+import deliveryTake from "../../assets/images/surveyeasy/delivery-take.gif";
+import deliveryResult from "../../assets/images/surveyeasy/delivery-result.gif";
 
 function SurveyEasyPage() {
   const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
@@ -843,7 +848,7 @@ function FinalDeliverySection() {
         <SmallHeader>Researcher Mode</SmallHeader>
 
         <Grid container spacing={3} sx={{ marginTop: 5 }}>
-          <Grid item lg={6}>
+          <Grid item lg={5}>
             <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
               Survey Info and Filters
             </Typography>
@@ -874,7 +879,15 @@ function FinalDeliverySection() {
             </Typography>
           </Grid>
 
-          <Grid item lg={6}>
+          <Grid item lg={7}>
+            <Image duration={0} src={deliveryResearcherFilter} fit="contain" />
+          </Grid>
+        </Grid>
+      </Fade>
+
+      <Fade bottom>
+        <Grid container spacing={3} sx={{ marginTop: 5 }}>
+          <Grid item lg={5}>
             <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
               Edit Survey & Preview
             </Typography>
@@ -905,46 +918,30 @@ function FinalDeliverySection() {
               Survey requires multiple question types
             </Typography>
           </Grid>
+
+          <Grid item lg={7}>
+            <Image duration={0} src={deliveryPreview} fit="contain" />
+          </Grid>
         </Grid>
       </Fade>
 
       <Fade bottom>
         <Grid container spacing={3} sx={{ marginTop: 5 }}>
-          <Grid item lg={6}>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
-              Survey Results
-            </Typography>
-
-            <Typography variant="h6">
-              Provides automatic analysis of survey answers by question, with
-              visualization
-            </Typography>
-
-            <Typography variant="h6">
-              Viewing answers by response and downloading survey data as JSON
-            </Typography>
-
-            <Typography
-              variant="h6"
-              display="inline-block"
-              sx={{ color: "#8B3C97", fontWeight: "bold", marginTop: 5 }}
-            >
-              Pain point:
-            </Typography>
-            <Typography variant="h6" display="inline">
-              {" "}
-              View responses with automatic data visualization
-            </Typography>
-          </Grid>
-
-          <Grid item lg={6}>
+          <Grid item lg={5}>
             <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
               Past Surveys Table
             </Typography>
 
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              01
+            </Typography>
             <Typography variant="h6">
               Displays past surveys with essential information (title, status,
               progress, etc.)
+            </Typography>
+
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              02
             </Typography>
             <Typography variant="h6">
               Allows sorting of any column to find relevant surveys easily
@@ -962,6 +959,51 @@ function FinalDeliverySection() {
               Finding past surveys easily
             </Typography>
           </Grid>
+
+          <Grid item lg={7}>
+            <Image duration={0} src={deliverySurveys} fit="contain" />
+          </Grid>
+        </Grid>
+      </Fade>
+
+      <Fade bottom>
+        <Grid container spacing={3} sx={{ marginTop: 5 }}>
+          <Grid item lg={5}>
+            <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+              Survey Results
+            </Typography>
+
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              01
+            </Typography>
+            <Typography variant="h6">
+              Provides automatic analysis of survey answers by question, with
+              visualization
+            </Typography>
+
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              02
+            </Typography>
+            <Typography variant="h6">
+              Viewing answers by response and downloading survey data as JSON
+            </Typography>
+
+            <Typography
+              variant="h6"
+              display="inline-block"
+              sx={{ color: "#8B3C97", fontWeight: "bold", marginTop: 5 }}
+            >
+              Pain point:
+            </Typography>
+            <Typography variant="h6" display="inline">
+              {" "}
+              View responses with automatic data visualization
+            </Typography>
+          </Grid>
+
+          <Grid item lg={7}>
+            <Image duration={0} src={deliveryResult} fit="contain" />
+          </Grid>
         </Grid>
       </Fade>
 
@@ -969,13 +1011,21 @@ function FinalDeliverySection() {
         <SmallHeader>Participant Mode</SmallHeader>
 
         <Grid container spacing={3} sx={{ marginTop: 5 }}>
-          <Grid item lg={6}>
+          <Grid item lg={5}>
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>
               Search and Filters
+            </Typography>
+
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              01
             </Typography>
             <Typography variant="h6">
               Allows searching for surveys of interest by keyword or filter by
               category, duration, or time sensitivity.
+            </Typography>
+
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              02
             </Typography>
             <Typography variant="h6">
               Displays current filters for easy viewing and editing
@@ -994,13 +1044,29 @@ function FinalDeliverySection() {
             </Typography>
           </Grid>
 
-          <Grid item lg={6}>
+          <Grid item lg={7}>
+            <Image duration={0} src={deliveryParticipantFilter} fit="contain" />
+          </Grid>
+        </Grid>
+      </Fade>
+
+      <Fade bottom>
+        <Grid container spacing={3} sx={{ marginTop: 5 }}>
+          <Grid item lg={5}>
             <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
               Taking Surveys
+            </Typography>
+
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              01
             </Typography>
             <Typography variant="h6">
               Title and description are sticky at the top of the page for easy
               viewing
+            </Typography>
+
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              02
             </Typography>
             <Typography variant="h6">
               Allow saving drafts and continuing later from the drafts page
@@ -1018,6 +1084,10 @@ function FinalDeliverySection() {
               It's difficult to save the progress on a survey, then find it and
               continue later.
             </Typography>
+          </Grid>
+
+          <Grid item lg={7}>
+            <Image duration={0} src={deliveryTake} fit="contain" />
           </Grid>
         </Grid>
       </Fade>
