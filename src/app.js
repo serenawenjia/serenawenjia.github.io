@@ -22,7 +22,7 @@ function App() {
   const { theme } = useContext(ThemeContext);
   const muiTheme = createTheme({
     typography: {
-      fontFamily: ["Poppins", "Arial", "sans-serif"].join(","),
+      fontFamily: "var(--primaryFont)",
     },
   });
   return (

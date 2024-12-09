@@ -827,8 +827,16 @@ function FinalDeliverySection() {
               Survey info allows participants to search surveys by title,
               description, category, duration, etc.
             </Typography>
-            <Typography variant="h6">
-              Pain point: Some responses come from ineligible participants
+            <Typography
+              variant="h6"
+              display="inline-block"
+              sx={{ color: "#8B3C97", fontWeight: "bold", marginTop: 5 }}
+            >
+              Pain point:
+            </Typography>
+            <Typography variant="h6" display="inline">
+              {" "}
+              Some responses come from ineligible participants
             </Typography>
           </Grid>
 
@@ -851,8 +859,16 @@ function FinalDeliverySection() {
               Preview allows researchers to view the survey as participants
               will.
             </Typography>
-            <Typography variant="h6">
-              Pain point: Survey requires multiple question types
+            <Typography
+              variant="h6"
+              display="inline-block"
+              sx={{ color: "#8B3C97", fontWeight: "bold", marginTop: 5 }}
+            >
+              Pain point:
+            </Typography>
+            <Typography variant="h6" display="inline">
+              {" "}
+              Survey requires multiple question types
             </Typography>
           </Grid>
         </Grid>
@@ -874,8 +890,16 @@ function FinalDeliverySection() {
               Viewing answers by response and downloading survey data as JSON
             </Typography>
 
-            <Typography variant="h6">
-              Pain point: View responses with automatic data visualization
+            <Typography
+              variant="h6"
+              display="inline-block"
+              sx={{ color: "#8B3C97", fontWeight: "bold", marginTop: 5 }}
+            >
+              Pain point:
+            </Typography>
+            <Typography variant="h6" display="inline">
+              {" "}
+              View responses with automatic data visualization
             </Typography>
           </Grid>
 
@@ -892,8 +916,16 @@ function FinalDeliverySection() {
               Allows sorting of any column to find relevant surveys easily
             </Typography>
 
-            <Typography variant="h6">
-              Pain point: Finding past surveys easily
+            <Typography
+              variant="h6"
+              display="inline-block"
+              sx={{ color: "#8B3C97", fontWeight: "bold", marginTop: 5 }}
+            >
+              Pain point:
+            </Typography>
+            <Typography variant="h6" display="inline">
+              {" "}
+              Finding past surveys easily
             </Typography>
           </Grid>
         </Grid>
@@ -914,8 +946,17 @@ function FinalDeliverySection() {
             <Typography variant="h6">
               Displays current filters for easy viewing and editing
             </Typography>
-            <Typography variant="h6">
-              Pain point: It's difficult to find surveys that are interesting.
+
+            <Typography
+              variant="h6"
+              display="inline-block"
+              sx={{ color: "#8B3C97", fontWeight: "bold", marginTop: 5 }}
+            >
+              Pain point:
+            </Typography>
+            <Typography variant="h6" display="inline">
+              {" "}
+              It's difficult to find surveys that are interesting.
             </Typography>
           </Grid>
 
@@ -930,9 +971,18 @@ function FinalDeliverySection() {
             <Typography variant="h6">
               Allow saving drafts and continuing later from the drafts page
             </Typography>
-            <Typography variant="h6">
-              Pain point: It's difficult to save the progress on a survey, then
-              find it and continue later.
+
+            <Typography
+              variant="h6"
+              display="inline-block"
+              sx={{ color: "#8B3C97", fontWeight: "bold", marginTop: 5 }}
+            >
+              Pain point:
+            </Typography>
+            <Typography variant="h6" display="inline">
+              {" "}
+              It's difficult to save the progress on a survey, then find it and
+              continue later.
             </Typography>
           </Grid>
         </Grid>
