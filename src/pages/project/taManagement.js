@@ -34,6 +34,9 @@ import refine2New from "../../assets/images/surveyeasy/refine-2-new.png";
 import cover from "../../assets/images/ta-management/cover.png";
 import wireframe1 from "../../assets/images/ta-management/wireframe1.png";
 import wireframe2 from "../../assets/images/ta-management/wireframe2.png";
+import wireframe3 from "../../assets/images/ta-management/wireframe3.png";
+import wireframe4 from "../../assets/images/ta-management/wireframe4.png";
+import wireframe5 from "../../assets/images/ta-management/wireframe5.png";
 import colorLight from "../../assets/images/surveyeasy/color-light.png";
 import colorDark from "../../assets/images/surveyeasy/color-dark.png";
 import roboto from "../../assets/images/surveyeasy/roboto.png";
@@ -154,9 +157,9 @@ function SurveyEasyPage() {
       </Container>
 
       <Fade bottom>
-        <Container ref={sectionRefs[2]}>
+        <Stack ref={sectionRefs[2]}>
           <IdeateAndPrototypeSection />
-        </Container>
+        </Stack>
       </Fade>
 
       <Fade bottom>
@@ -365,38 +368,61 @@ function EmpathizeAndDefineSection() {
 function IdeateAndPrototypeSection() {
   return (
     <>
-      <BigHeader>Ideate & Prototype</BigHeader>
+      <Container>
+        <BigHeader>Ideate & Prototype</BigHeader>
 
-      <SmallHeader>User Flow</SmallHeader>
-      <Stack alignItems="center">
-        <Image duration={0} src={userFlowImage} fit="contain" width="60%" />
-      </Stack>
-      <SmallHeader>Wireframe</SmallHeader>
+        <SmallHeader>User Flow</SmallHeader>
+        <Stack alignItems="center">
+          <Image duration={0} src={userFlowImage} fit="contain" width="60%" />
+        </Stack>
+        <SmallHeader>Wireframe</SmallHeader>
+      </Container>
 
-      <Stack direction="row" gap={5}>
-        <Image duration={0} src={wireframe1} fit="contain" />
-        <Image duration={0} src={wireframe2} fit="contain" />
-      </Stack>
-
-      <Grid container spacing={3} sx={{ marginTop: 5 }}>
-        <Grid item lg={6}>
-          <SmallHeader sx={{ marginTop: 0 }}>Design Style</SmallHeader>
+      <Container>
+        <Grid container spacing={3}>
+          <Grid item lg={6}>
+            <Image duration={0} src={wireframe1} fit="contain" />
+          </Grid>
+          <Grid item lg={6}>
+            <Image duration={0} src={wireframe2} fit="contain" />
+          </Grid>
         </Grid>
-        <Grid item lg={6}>
-          <Typography variant="body1">
-            The main color we chose was red and white. Since this is a school
-            website, we decided to use the same color of the symbol of McGill
-            University. making it feel consistent with the school’s symbol.
-          </Typography>
-          <Image duration={0} src={mcgill} fit="contain" height="60px" />
+      </Container>
 
-          <Typography variant="body1">
-            We used simple and easy-to-understand icons. We would like to make
-            sure these icons could be fast to recognize at a glance by the user.
-          </Typography>
-          <br />
+      <Grid container spacing={3}>
+        <Grid item lg={4}>
+          <Image duration={0} src={wireframe3} fit="contain" />
+        </Grid>
+        <Grid item lg={4}>
+          <Image duration={0} src={wireframe4} fit="contain" />
+        </Grid>
+        <Grid item lg={4}>
+          <Image duration={0} src={wireframe5} fit="contain" />
         </Grid>
       </Grid>
+
+      <Container>
+        <Grid container spacing={3} sx={{ marginTop: 5 }}>
+          <Grid item lg={6}>
+            <SmallHeader sx={{ marginTop: 0 }}>Design Style</SmallHeader>
+          </Grid>
+          <Grid item lg={6}>
+            <Typography variant="body1">
+              The main color we chose was red and white. Since this is a school
+              website, we decided to use the same color of the symbol of McGill
+              University. making it feel consistent with the school’s symbol.
+            </Typography>
+            <Image duration={0} src={mcgill} fit="contain" height="60px" />
+
+            <Typography variant="body1">
+              We used simple and easy-to-understand icons. We would like to make
+              sure these icons could be fast to recognize at a glance by the
+              user.
+            </Typography>
+            <br />
+          </Grid>
+        </Grid>
+      </Container>
     </>
   );
 }
