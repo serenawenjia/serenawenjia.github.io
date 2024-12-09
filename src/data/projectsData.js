@@ -24,15 +24,17 @@ export const projectsData = [
     projectDesc:
       "I performed data collection and data analysis on Twitter posts about COVID-19 and vaccination.",
     tags: ["Data Collection", "Data Analysis", "Data Visualization"],
-    demo: "https://github.com/serenawenjia/comp598_finalProject/blob/main/comp598_final_report.pdf",
+    demo:
+      "https://github.com/serenawenjia/comp598_finalProject/blob/main/comp598_final_report.pdf",
     image: cover598,
   },
   {
     projectName: "Data Analysis and Visualization in R: Movie Score Analysis",
     projectDesc:
-      "Our team of 3 conducted data analysis and visualization on movie data and factors that contribute to their score.",
+      "Our team of 3 conducted data analysis and visualization on factors that contribute to movie score.",
     tags: ["Data Wrangling", "Data Analysis", "Data Visualization"],
-    demo: "",
-    image: undefined,
+    demo:
+      "https://drive.google.com/file/d/1M8z_kwF8SL6QrlomBncDfBXHhUe_lPa_/view?usp=sharing",
+    image: undefined, // TODO
   },
 ];
