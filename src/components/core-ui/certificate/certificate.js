@@ -6,7 +6,7 @@ import {
   Container,
   IconButton,
   Link,
-  Typography
+  Typography,
 } from "@mui/material";
 import React, { useContext } from "react";
 import { HiExternalLink } from "react-icons/hi";
@@ -37,11 +37,12 @@ const Certificate = () => {
 
   return (
     <Container sx={{ py: 5 }}>
-      <div className='certificate-header'>
+      <div className="certificate-header">
         <h1
           style={{
             color: theme.primary,
-          }}>
+          }}
+        >
           Certificates
         </h1>
       </div>
@@ -50,7 +51,7 @@ const Certificate = () => {
           <Card sx={{ height: { xs: 320, sm: 480 } }}>
             <CardActionArea>
               <CardMedia
-                component='img'
+                component="img"
                 sx={{
                   height: { xs: 270, sm: 420 },
                   borderBottom: "1px solid #f5f5f5",
@@ -63,7 +64,8 @@ const Certificate = () => {
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                }}>
+                }}
+              >
                 <Typography>{item.title}</Typography>
                 <IconButton>
                   <Link href={item.link}>
