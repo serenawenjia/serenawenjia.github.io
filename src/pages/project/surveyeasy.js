@@ -63,9 +63,24 @@ function SurveyEasyPage() {
       <Container>
         <Image duration={0} src={cover} fit="contain" />
 
-        <Typography variant="h2" align="center" sx={{ fontWeight: "bold" }}>
+        <Typography
+          gutterBottom
+          variant="h2"
+          align="center"
+          sx={{ fontWeight: "bold" }}
+        >
           SurveyEasy
         </Typography>
+
+        <Link
+          href="https://surveyeasy-psql-mui-5016.fly.dev/"
+          color="inherit"
+          underline="always"
+        >
+          <Typography align="center" variant="h5" sx={{ fontWeight: "bold" }}>
+            Live website
+          </Typography>
+        </Link>
 
         <Fade bottom>
           <Grid
@@ -616,28 +631,56 @@ function FinalDeliverySection() {
   return (
     <>
       <BigHeader>Final Delivery</BigHeader>
-      <SmallHeader>Key Features</SmallHeader>
 
-      <Grid container spacing={3} sx={{ marginTop: 5 }}>
+      <Grid container spacing={3}>
+        <Grid item lg={6}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/-F4uANdtuWc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </Grid>
+        <Grid item lg={6}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Yef0sYWpO1s"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </Grid>
+      </Grid>
+      {/* <SmallHeader>Key Features</SmallHeader> */}
+
+      {/* <Grid container spacing={3} sx={{ marginTop: 5 }}>
         <Grid item lg={6}>
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>
             Filter
           </Typography>
-
           <Typography variant="body1">
             01. (Two Advantages: one for filtering surveys, the other one for
             quick filter participants with only a few clicks while creating
             surveys. Function: eliminate mismatch)
           </Typography>
-
+          <Typography variant="body1">
+            useful in situations where the user may not know exactly the exact
+            word of title to search for or where choosing from a list of search
+            criteria is faster than typing in all the search terms.
+          </Typography>
           <Typography variant="body1">
             → Pain point: Take long time for selecting a preferred survey
           </Typography>
         </Grid>
         <Grid item lg={6}></Grid>
-      </Grid>
+      </Grid> */}
 
-      <Grid container spacing={3} sx={{ marginTop: 5 }}>
+      {/* <Grid container spacing={3} sx={{ marginTop: 5 }}>
         <Grid item lg={6}>
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>
             Sort All surveys, can sort each column name individually
@@ -661,7 +704,7 @@ function FinalDeliverySection() {
           <Typography variant="body1">→ Pain point: </Typography>
         </Grid>
         <Grid item lg={6}></Grid>
-      </Grid>
+      </Grid> */}
     </>
   );
 }

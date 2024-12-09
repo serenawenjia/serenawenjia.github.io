@@ -584,7 +584,18 @@ function FinalDeliverySection() {
   return (
     <>
       <BigHeader>Final Delivery</BigHeader>
-      <SmallHeader>Key Features</SmallHeader>
+
+      <iframe
+        width="1120"
+        height="730"
+        src="https://www.youtube.com/embed/kCIjidPASZc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+
+      {/* <SmallHeader>Key Features</SmallHeader>
 
       <Grid container spacing={3} sx={{ marginTop: 5 }}>
         <Grid item lg={6}>
@@ -626,7 +637,7 @@ function FinalDeliverySection() {
         <Grid item lg={6}>
           <Image duration={0} src={dropdown} fit="contain" height="200px" />
         </Grid>
-      </Grid>
+      </Grid> */}
     </>
   );
 }
