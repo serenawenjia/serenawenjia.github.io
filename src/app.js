@@ -1,3 +1,4 @@
+import { createTheme, ThemeProvider } from "@mui/material";
 import React, { useContext } from "react";
 import {
   BrowserRouter as Router,
@@ -19,30 +20,36 @@ import TAManagementPage from "./pages/project/taManagement";
 
 function App() {
   const { theme } = useContext(ThemeContext);
-
+  const muiTheme = createTheme({
+    typography: {
+      fontFamily: ["Poppins", "Arial", "sans-serif"].join(","),
+    },
+  });
   return (
-    <div style={{ backgroundColor: theme.secondary }}>
-      <Router>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<HomePage />} exact />
-          <Route path="/about" element={<AboutPage />} exact />
-          <Route path="/projects" element={<ProjectPage />} exact />
-          <Route
-            path="/projects/surveyeasy"
-            element={<SurveyEasyPage />}
-            exact
-          />
-          <Route
-            path="/projects/ta-management"
-            element={<TAManagementPage />}
-            exact
-          />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Router>
-      <BackToTop />
-    </div>
+    <ThemeProvider theme={muiTheme}>
+      <div style={{ backgroundColor: theme.secondary }}>
+        <Router>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<HomePage />} exact />
+            <Route path="/about" element={<AboutPage />} exact />
+            <Route path="/projects" element={<ProjectPage />} exact />
+            <Route
+              path="/projects/surveyeasy"
+              element={<SurveyEasyPage />}
+              exact
+            />
+            <Route
+              path="/projects/ta-management"
+              element={<TAManagementPage />}
+              exact
+            />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Router>
+        <BackToTop />
+      </div>
+    </ThemeProvider>
   );
 }
 
