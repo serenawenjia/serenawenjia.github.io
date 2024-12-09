@@ -1,22 +1,9 @@
-import {
-  Box,
-  Card,
-  CardMedia,
-  Container,
-  Grid,
-  Link,
-  Paper,
-  Stack,
-  Typography,
-} from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { Container, Grid, Link, Stack, Typography } from "@mui/material";
 import Image from "mui-image";
-import React, { useContext, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Helmet } from "react-helmet";
 import { Fade } from "react-reveal";
-import ProjectPageUI from "../../components/core-ui/project-page/project-page-ui";
-import { ThemeContext } from "../../contexts/theme-context";
-import { projectsData } from "../../data/projectsData";
+import Navbar from "../../components/container/navbar";
 import questionnaireR from "../../assets/images/surveyeasy/questionnaire-r.png";
 import questionnaireP from "../../assets/images/surveyeasy/questionnaire-p.png";
 import empathyMapP from "../../assets/images/surveyeasy/empathy-map-p.png";
@@ -25,10 +12,13 @@ import personaR from "../../assets/images/surveyeasy/persona-r.jpg";
 import personaP from "../../assets/images/surveyeasy/persona-p.jpg";
 import validateR from "../../assets/images/surveyeasy/validate-r.png";
 import validateP from "../../assets/images/surveyeasy/validate-p.png";
-import refine1 from "../../assets/images/surveyeasy/refine-1.png";
-import refine2 from "../../assets/images/surveyeasy/refine-2.png";
+import refine1Old from "../../assets/images/surveyeasy/refine-1-old.png";
+import refine1New from "../../assets/images/surveyeasy/refine-1-new.png";
+import refine2Old from "../../assets/images/surveyeasy/refine-2-old.png";
+import refine2New from "../../assets/images/surveyeasy/refine-2-new.png";
 import cover from "../../assets/images/surveyeasy/cover.png";
-import Navbar from "../../components/container/navbar";
+import leftDownArrow from "../../assets/images/left-down.png";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 function SurveyEasyPage() {
   const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
@@ -96,7 +86,7 @@ function SurveyEasyPage() {
             spacing={3}
           >
             <Grid item xs={6} lg={3}>
-              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+              <Typography variant="h4" sx={{ fontWeight: "bold" }} gutterBottom>
                 The Challenge
               </Typography>
               <Typography variant="body1">
@@ -105,7 +95,7 @@ function SurveyEasyPage() {
               </Typography>
             </Grid>
             <Grid item xs={12} lg={9}>
-              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+              <Typography variant="h4" sx={{ fontWeight: "bold" }} gutterBottom>
                 Project Goal
               </Typography>
               <Typography variant="body1">
@@ -136,7 +126,11 @@ function SurveyEasyPage() {
                   sectionRefs[0].current.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                <Typography
+                  variant="h5"
+                  gutterBottom
+                  sx={{ fontWeight: "bold" }}
+                >
                   Discover
                 </Typography>
               </Link>
@@ -152,7 +146,11 @@ function SurveyEasyPage() {
                   sectionRefs[1].current.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                <Typography
+                  variant="h5"
+                  gutterBottom
+                  sx={{ fontWeight: "bold" }}
+                >
                   Empathize & Define
                 </Typography>
               </Link>
@@ -169,7 +167,11 @@ function SurveyEasyPage() {
                   sectionRefs[2].current.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                <Typography
+                  variant="h5"
+                  gutterBottom
+                  sx={{ fontWeight: "bold" }}
+                >
                   Ideate & Prototype
                 </Typography>
               </Link>
@@ -186,7 +188,11 @@ function SurveyEasyPage() {
                   sectionRefs[3].current.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                <Typography
+                  variant="h5"
+                  gutterBottom
+                  sx={{ fontWeight: "bold" }}
+                >
                   Validate
                 </Typography>
               </Link>
@@ -201,7 +207,11 @@ function SurveyEasyPage() {
                   sectionRefs[4].current.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                <Typography
+                  variant="h5"
+                  gutterBottom
+                  sx={{ fontWeight: "bold" }}
+                >
                   Final Delivery
                 </Typography>
               </Link>
@@ -212,41 +222,26 @@ function SurveyEasyPage() {
       </Fade>
       <Fade bottom>
         <Container sx={{ marginTop: 5 }} ref={sectionRefs[0]}>
-          <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-            Discover
-          </Typography>
           <DiscoverSection />
         </Container>
       </Fade>
       <Fade bottom>
         <Container sx={{ marginTop: 5 }} ref={sectionRefs[1]}>
-          <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-            Empathize & Define
-          </Typography>
           <EmpathizeAndDefineSection />
         </Container>
       </Fade>
       <Fade bottom>
         <Container sx={{ marginTop: 5 }} ref={sectionRefs[2]}>
-          <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-            Ideate & Prototype
-          </Typography>
           <IdeateAndPrototypeSection />
         </Container>
       </Fade>
       <Fade bottom>
         <Container sx={{ marginTop: 5 }} ref={sectionRefs[3]}>
-          <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-            Validate
-          </Typography>
           <ValidateSection />
         </Container>
       </Fade>
       <Fade bottom>
         <Container sx={{ marginTop: 5 }} ref={sectionRefs[4]}>
-          <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
-            Final Delivery
-          </Typography>
           <FinalDeliverySection />
         </Container>
       </Fade>
@@ -259,7 +254,11 @@ export default SurveyEasyPage;
 function DiscoverSection() {
   return (
     <>
-      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
+        Discover
+      </Typography>
+
+      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
         Research Methods
       </Typography>
       <Typography variant="body1">
@@ -267,7 +266,7 @@ function DiscoverSection() {
         surveys and interviews.
       </Typography>
 
-      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
         Target Users
       </Typography>
       <Typography variant="body1">Primary User Group</Typography>
@@ -276,7 +275,7 @@ function DiscoverSection() {
         others currently seeking for survey to post and fill out
       </Typography>
 
-      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
         Survey & Interview
       </Typography>
       <Typography variant="body1">
@@ -300,7 +299,11 @@ function DiscoverSection() {
 function EmpathizeAndDefineSection() {
   return (
     <>
-      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
+        Empathize & Define
+      </Typography>
+
+      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
         User Persona
       </Typography>
 
@@ -412,7 +415,7 @@ function EmpathizeAndDefineSection() {
         </Grid>
       </Grid>
 
-      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
         Empathy Map
       </Typography>
       <Image src={empathyMapP} fit="contain" />
@@ -423,12 +426,16 @@ function EmpathizeAndDefineSection() {
 function IdeateAndPrototypeSection() {
   return (
     <>
-      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
+        Ideate & Prototype
+      </Typography>
+
+      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
         User Flow
       </Typography>
       <Image src={userFlowImage} fit="contain" />
 
-      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
         Low-Fidelity Wireframe
       </Typography>
       <Image src={userFlowImage} fit="contain" />
@@ -439,6 +446,10 @@ function IdeateAndPrototypeSection() {
 function ValidateSection() {
   return (
     <>
+      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
+        Validate
+      </Typography>
+
       <Typography variant="h6" sx={{ fontWeight: "bold" }}>
         Validate
       </Typography>
@@ -465,29 +476,70 @@ function ValidateSection() {
         </Grid>
       </Grid>
 
-      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
         Refine
       </Typography>
+
+      <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+        1. Design Iteration | Participant Home Page
+      </Typography>
       <Typography variant="body1">
-        1：Add a new function — ‘current filters’, which allows the users to
+        Add a new function — ‘current filters’, which allows the users to
         track/edit the current filters easily.
       </Typography>
-      <Typography variant="body1">
-        → Pain point: Take long time for selecting a preferred survey
-      </Typography>
-      <Image src={refine1} fit="contain" />
+      <Grid container>
+        <Grid item lg={5.5}>
+          <Image src={refine1New} fit="contain" />
+        </Grid>
+        <Grid
+          item
+          lg={1}
+          display="flex"
+          justifyContent="end"
+          alignItems="center"
+        >
+          <AiOutlineArrowLeft size={60} />
+        </Grid>
+        <Grid item lg={5.5}>
+          <Image src={refine1Old} fit="contain" />
+        </Grid>
+      </Grid>
 
-      <Typography variant="body1">
+      <Typography variant="h6">
         2: show all surveys in the table instead of card component
       </Typography>
       <Typography variant="body1">
-        → Pain point: hard to organize all survey
+        → Pain point: hard to organize all survey (A clear-cut organizational
+        structure)
       </Typography>
-      <Image src={refine2} fit="contain" />
+
+      <Grid container>
+        <Grid item lg={5.5}>
+          <Image src={refine2New} fit="contain" />
+        </Grid>
+        <Grid
+          item
+          lg={1}
+          display="flex"
+          justifyContent="end"
+          alignItems="center"
+        >
+          <AiOutlineArrowLeft size={60} />
+        </Grid>
+        <Grid item lg={5.5}>
+          <Image src={refine2Old} fit="contain" />
+        </Grid>
+      </Grid>
     </>
   );
 }
 
 function FinalDeliverySection() {
-  return <>hi</>;
+  return (
+    <>
+      <Typography variant="h3" sx={{ fontWeight: "bold", marginBottom: 5 }}>
+        Final Delivery
+      </Typography>
+    </>
+  );
 }
