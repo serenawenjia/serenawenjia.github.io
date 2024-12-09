@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React, { useContext, useState } from "react";
+import { Fade } from "react-reveal";
 import ProjectPageUI from "../../components/core-ui/project-page/project-page-ui";
 import { ThemeContext } from "../../contexts/theme-context";
 import { projectsData } from "../../data/projectsData";
@@ -84,43 +85,45 @@ function SurveyEasyPage() {
           </Grid>
         </Grid>
 
-        <Grid
-          container
-          sx={{
-            marginTop: 5,
-          }}
-        >
-          <Grid item xs={2}>
-            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-              1
-            </Typography>
+        <Fade bottom>
+          <Grid
+            container
+            sx={{
+              marginTop: 5,
+            }}
+          >
+            <Grid item xs={2}>
+              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                1
+              </Typography>
+            </Grid>
+            <Grid item xs={2}>
+              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                2
+              </Typography>
+            </Grid>
+            <Grid item xs={2}>
+              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                3
+              </Typography>
+            </Grid>
+            <Grid item xs={2}>
+              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                4
+              </Typography>
+            </Grid>
+            <Grid item xs={2}>
+              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                5
+              </Typography>
+            </Grid>
+            <Grid item xs={2}>
+              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                6
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item xs={2}>
-            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-              2
-            </Typography>
-          </Grid>
-          <Grid item xs={2}>
-            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-              3
-            </Typography>
-          </Grid>
-          <Grid item xs={2}>
-            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-              4
-            </Typography>
-          </Grid>
-          <Grid item xs={2}>
-            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-              5
-            </Typography>
-          </Grid>
-          <Grid item xs={2}>
-            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-              6
-            </Typography>
-          </Grid>
-        </Grid>
+        </Fade>
       </Container>
     </>
   );
