@@ -1,4 +1,5 @@
 import {
+  Box,
   Container,
   CssBaseline,
   Grid,
@@ -136,7 +137,7 @@ function SurveyEasyPage() {
         </Fade>
       </Container>
       <Fade bottom>
-        <Container>
+        <Container sx={{ maxWidth: "90%" }} maxWidth={false}>
           <BigHeader>Process</BigHeader>
           <Grid container>
             <Grid item xs={6} lg={12 / 5}>
@@ -285,20 +286,28 @@ function DiscoverSection() {
       </Typography>
 
       <SmallHeader>Target Users</SmallHeader>
-      <Typography variant="body1" sx={{ fontWeight: "bold" }} align="center">
-        Primary User Group
-      </Typography>
-      <Typography
-        variant="h6"
-        sx={{ fontWeight: "bold", color: "#bf9001" }}
-        align="center"
+      <Box
+        sx={{
+          border: "1px solid black",
+          borderRadius: 6,
+          padding: 2,
+        }}
       >
-        Researchers, Students, People who like to get rewarded while helping the
-        others
-      </Typography>
-      <Typography variant="body1" align="center">
-        Currently seeking for survey to post and fill out
-      </Typography>
+        <Typography variant="body1" sx={{ fontWeight: "bold" }} align="center">
+          Primary User Group
+        </Typography>
+        <Typography
+          variant="h6"
+          sx={{ fontWeight: "bold", color: "#bf9001" }}
+          align="center"
+        >
+          Researchers, Students, People who like to get rewarded while helping
+          the others
+        </Typography>
+        <Typography variant="body1" align="center">
+          Currently seeking for survey to post and fill out
+        </Typography>
+      </Box>
 
       <SmallHeader>Survey & Interview</SmallHeader>
       <Typography variant="body1">
