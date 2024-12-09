@@ -4,6 +4,7 @@ import Fade from "react-reveal/Fade";
 import placeholder from "../../../assets/png/placeholder.png";
 import "./single-project.css";
 import { SlBookOpen } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 function SingleProjectUI({
   id,
@@ -17,66 +18,50 @@ function SingleProjectUI({
 }) {
   return (
     <Fade bottom>
-      <div
-        key={id}
-        className="singleProject"
-        style={{ backgroundColor: theme.quaternary }}
-      >
-        <div className="projectContent">
-          <h2
-            id={name.replace(" ", "-").toLowerCase()}
-            style={{ color: theme.tertiary }}
-          >
-            {name}
-          </h2>
-          <img
-            src={image ? image : placeholder}
-            alt={name}
-            style={{
-              height: "240px",
-              width: "auto",
-              // mixBlendMode: "multiply"
-            }}
-          />
-          <div className="project--showcaseBtn">
-            <a
-              href={demo}
-              target="_blank"
-              rel="noreferrer"
-              className={classes.iconBtn}
-              aria-labelledby={`${name.replace(" ", "-").toLowerCase()} ${name
-                .replace(" ", "-")
-                .toLowerCase()}-demo`}
+      <Link to={demo}>
+        <div
+          key={id}
+          className="singleProject"
+          style={{ backgroundColor: theme.quaternary }}
+        >
+          <div className="projectContent">
+            <h2
+              id={name.replace(" ", "-").toLowerCase()}
+              style={{ color: theme.tertiary }}
             >
-              <SlBookOpen
-                id={`${name.replace(" ", "-").toLowerCase()}-demo`}
-                className={classes.icon}
-                aria-label="Demo"
-              />
-            </a>
+              {name}
+            </h2>
+            <img
+              src={image ? image : placeholder}
+              alt={name}
+              style={{
+                height: "240px",
+                width: "auto",
+              }}
+            />
+          </div>
+          <p
+            className="project--desc"
+            style={{
+              background: theme.secondary,
+              color: theme.tertiary,
+            }}
+          >
+            {desc}
+          </p>
+          <div
+            className="project--tags"
+            style={{
+              background: theme.secondary,
+              color: theme.tertiary,
+            }}
+          >
+            {tags.map((tag, id) => (
+              <span key={id}>{tag}</span>
+            ))}
           </div>
         </div>
-        <p
-          className="project--desc"
-          style={{
-            background: theme.secondary,
-            color: theme.tertiary,
-          }}
-        >
-          {desc}
-        </p>
-        <div
-          className="project--lang"
-          style={{
-            background: theme.secondary,
-            color: theme.tertiary,
-          }}
-        >
-          {tags.map((tag, id) => (
-            <span key={id}>{tag}</span>
-          ))}
-        </div>
-      </div>
+      </Link>
     </Fade>
   );
 }
