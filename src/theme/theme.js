@@ -4,8 +4,8 @@ import { contactsGreen } from "./images";
 export const theLightTheme = {
   type: "light",
   primary: "#1D9BF0", // some text
-  quaternary: "#f9f9f9", // left panel
-  secondary: "#f9f9f9", // background
+  quaternary: "#fff", // left panel
+  secondary: "#fff", // background
   tertiary: "#0f1419", // some text
   buttonColor: "#0F1419", // View all button
   contactsimg: contactsGreen,

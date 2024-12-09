@@ -21,9 +21,9 @@ const Landing = () => {
       border: `3px solid ${theme.primary}`,
       transition: "500ms ease-out",
       "&:hover": {
-        backgroundColor: theme.buttonColor,
         color: theme.secondary,
-        border: `3px solid ${theme.buttonColor}`,
+        backgroundColor: theme.primary,
+        cursor: "pointer",
       },
       [t.breakpoints.down("sm")]: {
         width: "180px",
@@ -43,9 +43,7 @@ const Landing = () => {
       border: `3px solid ${theme.primary}`,
       transition: "500ms ease-out",
       "&:hover": {
-        backgroundColor: theme.buttonColor,
-        color: theme.secondary,
-        border: `3px solid ${theme.buttonColor}`,
+        cursor: "pointer",
       },
       [t.breakpoints.down("sm")]: {
         display: "none",
