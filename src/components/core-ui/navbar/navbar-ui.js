@@ -90,10 +90,14 @@ function NavbarUI({
 
             <Fade left>
               <div>
-                <a target="_blank" rel="noreferrer" href={headerData.cvUrl}>
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href={headerData.resumeUrl}
+                >
                   <div className={classes.drawerItem}>
                     <HiDocumentText className={classes.drawerIcon} />
-                    <span className={classes.drawerLinks}>CV</span>
+                    <span className={classes.drawerLinks}>Resume</span>
                   </div>
                 </a>
               </div>

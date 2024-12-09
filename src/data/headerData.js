@@ -7,8 +7,8 @@ export const headerData = {
   desciption2: "Passionate about UI/UX, HCD, and Problem Solving.",
   desciption3: "Think and create ( ๑╹ ꇴ╹)✧",
   image: image,
-  cvUrl:
-    "https://drive.google.com/file/d/1NsN8EVO-0B9po-BHpbCZeczlwRzplvzK/view",
+  resumeUrl:
+    "https://docs.google.com/document/d/1W8mGbfxntUrvjHacQEoJ-rOF6ZJE1s-hUUpAhen8iVU/view",
   contactUrl:
     "mailto:wenjia.liu@mail.mcgill.ca?subject=Let%27s%20get%20in%20touch!",
 };
