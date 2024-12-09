@@ -1,11 +1,19 @@
 export const educationData = [
   {
     id: 1,
+    location: "New York, NY, United States",
+    institution: "Pratt Institute",
+    course: "Master of Science in Information Experience Design",
+    startYear: "2023",
+    endYear: "Present",
+  },
+  {
+    id: 1,
     location: "Montréal, QC, Canada",
     institution: "McGill University",
-    course: "Bachelor's Degree",
+    course: "Bachelor of Arts in Computer Science",
     startYear: "2019",
-    endYear: "Present",
+    endYear: "2023",
   },
   {
     id: 2,
