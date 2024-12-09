@@ -26,29 +26,7 @@ import wireframe4 from "../../assets/images/ta-management/wireframe4.png";
 import wireframe5 from "../../assets/images/ta-management/wireframe5.png";
 import database from "../../assets/images/ta-management/database.png";
 import mcgill from "../../assets/images/ta-management/mcgill.jpeg";
-
-function BigHeader({ children, sx }) {
-  return (
-    <Typography
-      variant="h3"
-      sx={{ fontWeight: "bold", marginTop: 5, marginBottom: 5 }}
-    >
-      {children}
-    </Typography>
-  );
-}
-
-function SmallHeader({ children, sx }) {
-  return (
-    <Typography
-      variant="h5"
-      gutterBottom
-      sx={{ fontWeight: "bold", marginTop: 5, ...sx }}
-    >
-      {children}
-    </Typography>
-  );
-}
+import { BigHeader, SmallHeader } from "./components";
 
 function SurveyEasyPage() {
   const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];

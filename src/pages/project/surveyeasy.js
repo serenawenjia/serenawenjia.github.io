@@ -26,32 +26,7 @@ import refine2Old from "../../assets/images/surveyeasy/refine-2-old.png";
 import refine2New from "../../assets/images/surveyeasy/refine-2-new.png";
 import cover from "../../assets/images/surveyeasy/cover.png";
 import wireframe from "../../assets/images/surveyeasy/lo-fi-wireframe.png";
-import colorLight from "../../assets/images/surveyeasy/color-light.png";
-import colorDark from "../../assets/images/surveyeasy/color-dark.png";
-import roboto from "../../assets/images/surveyeasy/roboto.png";
-
-function BigHeader({ children, sx }) {
-  return (
-    <Typography
-      variant="h3"
-      sx={{ fontWeight: "bold", marginTop: 5, marginBottom: 5, ...sx }}
-    >
-      {children}
-    </Typography>
-  );
-}
-
-function SmallHeader({ children, sx }) {
-  return (
-    <Typography
-      variant="h5"
-      gutterBottom
-      sx={{ fontWeight: "bold", marginTop: 5, ...sx }}
-    >
-      {children}
-    </Typography>
-  );
-}
+import { BigHeader, SmallHeader } from "./components";
 
 function SurveyEasyPage() {
   const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
