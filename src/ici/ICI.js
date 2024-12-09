@@ -26,9 +26,9 @@ export default function ICIPage() {
 
         <div className="flex flex-row gap-8">
           <Button
-            sx={{
+            style={{
               color: "black",
-              borderRadius: 8,
+              borderRadius: 32,
               backgroundColor: "#DEFF99",
               fontWeight: "bold",
             }}
@@ -38,9 +38,9 @@ export default function ICIPage() {
             Usability Report
           </Button>
           <Button
-            sx={{
+            style={{
               color: "black",
-              borderRadius: 8,
+              borderRadius: 32,
               backgroundColor: "#DEFF99",
               fontWeight: "bold",
             }}
