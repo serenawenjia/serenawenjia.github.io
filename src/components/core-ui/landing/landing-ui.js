@@ -89,16 +89,6 @@ function LandingUI({ theme, drawerOpen, classes }) {
             <p>{headerData.desciption}</p>
             <p>{headerData.desciption2}</p>
             <p>{headerData.desciption3}</p>
-
-            <div className="lcr-buttonContainer">
-              <a href={headerData.cvUrl} target="_blank" rel="noreferrer">
-                <button className={classes.resumeBtn}>CV</button>
-              </a>
-
-              <a href={headerData.contactUrl} target="_blank" rel="noreferrer">
-                <button className={classes.contactBtn}>Contact</button>
-              </a>
-            </div>
           </div>
         </div>
       </div>

@@ -27,11 +27,11 @@ function ProjectsUI({ theme, classes }) {
               alignItems="center"
               justifyContent="center"
             >
-              {projectsData.map((project) => (
+              {projectsData.map((project, id) => (
                 <SingleProject
                   theme={theme}
-                  key={project.id}
-                  id={project.id}
+                  key={id}
+                  id={id}
                   name={project.projectName}
                   desc={project.projectDesc}
                   tags={project.tags}

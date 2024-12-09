@@ -13,8 +13,6 @@ function AboutPage() {
       </Helmet>
       <Navbar />
       <About />
-      <Skills />
-      <Education />
     </div>
   );
 }

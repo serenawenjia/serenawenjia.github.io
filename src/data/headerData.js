@@ -1,7 +1,7 @@
 import image from "../assets/images/wenjia.jpg";
 
 export const headerData = {
-  name: "Greetings, I'm Wenjia Liu",
+  name: "Greetings, I'm Wenjia",
   desciption:
     "I'm a 4th year Computer Science student at McGill University graduating in May 2023.",
   desciption2: "Passionate about UI/UX, HCD, and Problem Solving.  ",
