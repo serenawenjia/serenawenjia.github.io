@@ -33,7 +33,7 @@ export default function ICIPage() {
               fontWeight: "bold",
             }}
             variant="contained"
-            href="https://www.figma.com/proto/aop7GuPad58SjuCQaZOUzd/Report-%2B-Presentation-(Copy)?type=design&node-id=143-2&t=Cc1j19qFW7lzjo3U-1&scaling=scale-down&page-id=0%3A1&mode=design"
+            href="https://www.figma.com/proto/aop7GuPad58SjuCQaZOUzd/Report-%2B-Presentation-(Copy)?type=design&node-id=145-191&t=Cc1j19qFW7lzjo3U-1&scaling=scale-down&page-id=0%3A1"
           >
             Usability Report
           </Button>
