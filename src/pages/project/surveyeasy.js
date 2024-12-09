@@ -6,6 +6,7 @@ import {
   Grid,
   Link,
   Paper,
+  Stack,
   Typography,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
@@ -16,10 +17,16 @@ import { Fade } from "react-reveal";
 import ProjectPageUI from "../../components/core-ui/project-page/project-page-ui";
 import { ThemeContext } from "../../contexts/theme-context";
 import { projectsData } from "../../data/projectsData";
-import surveyResearcherImage from "../../assets/images/surveyeasy/survey-researcher.png";
-import surveyParticipantImage from "../../assets/images/surveyeasy/survey-participant.png";
-import empathyMapParticipantImage from "../../assets/images/surveyeasy/empathy-map-participant.png";
+import questionnaireR from "../../assets/images/surveyeasy/questionnaire-r.png";
+import questionnaireP from "../../assets/images/surveyeasy/questionnaire-p.png";
+import empathyMapP from "../../assets/images/surveyeasy/empathy-map-p.png";
 import userFlowImage from "../../assets/images/surveyeasy/user-flow.png";
+import personaR from "../../assets/images/surveyeasy/persona-r.jpg";
+import personaP from "../../assets/images/surveyeasy/persona-p.jpg";
+import validateR from "../../assets/images/surveyeasy/validate-r.png";
+import validateP from "../../assets/images/surveyeasy/validate-p.png";
+import refine1 from "../../assets/images/surveyeasy/refine-1.png";
+import refine2 from "../../assets/images/surveyeasy/refine-2.png";
 
 function SurveyEasyPage() {
   const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
@@ -251,7 +258,6 @@ function SurveyEasyPage() {
 export default SurveyEasyPage;
 
 function DiscoverSection() {
-  console.log(surveyResearcherImage);
   return (
     <>
       <Typography variant="h5" sx={{ fontWeight: "bold" }}>
@@ -282,10 +288,10 @@ function DiscoverSection() {
 
       <Grid container spacing={3}>
         <Grid item xs={6}>
-          <Image src={surveyResearcherImage} fit="contain" />
+          <Image src={questionnaireR} fit="contain" />
         </Grid>
         <Grid item xs={6}>
-          <Image src={surveyParticipantImage} fit="contain" />
+          <Image src={questionnaireP} fit="contain" />
         </Grid>
       </Grid>
     </>
@@ -301,7 +307,7 @@ function EmpathizeAndDefineSection() {
 
       <Grid container spacing={3}>
         <Grid item xs={12} lg={4}>
-          <Image src={"https://picsum.photos/1000/300"} fit="contain" />
+          <Image src={personaR} fit="contain" />
         </Grid>
         <Grid item xs={12} lg={8}>
           <Typography variant="body1">
@@ -352,10 +358,65 @@ function EmpathizeAndDefineSection() {
         </Grid>
       </Grid>
 
+      <Grid container spacing={3}>
+        <Grid item xs={12} lg={4}>
+          <Image src={personaP} fit="contain" />
+        </Grid>
+        <Grid item xs={12} lg={8}>
+          <Typography variant="body1">
+            Tristan is a 34-year-old middle-class man working in the manufacture
+            industry. He lives with his wife in Louisville, Kentucky. He works a
+            9 to 5 job and usually spends the night with family and friends. He
+            likes to take surveys in sports and health when he is free because
+            those areas appeal to him and he feels that he is contributing to
+            research projects in his way. Of course, he wouldn't mind the gift
+            cards from some surveys as a reward.
+          </Typography>
+
+          <Typography variant="h6" sx={{ fontWeight: "bold" }} align="center">
+            Personality Traits
+          </Typography>
+          <Typography variant="body1" align="center">
+            Altruistic, Energetic, Curious
+          </Typography>
+
+          <Grid container spacing={3}>
+            <Grid item lg={6}>
+              <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                Goal
+              </Typography>
+              <Typography variant="body1">
+                Filter surveys by category and keywords to find the interesting
+                ones.
+              </Typography>
+              <Typography variant="body1">
+                Be able to easily save the progress, view drafts and continue
+                later.
+              </Typography>
+            </Grid>
+            <Grid item lg={6}>
+              <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                Frustration
+              </Typography>
+              <Typography variant="body1">
+                It's difficult to search and find surveys that are interesting.
+              </Typography>
+              <Typography variant="body1">
+                It's hard to remember where a survey was and continue after a
+                day or two
+              </Typography>
+              <Typography variant="body1">
+                Some websites don't allow going back to previous questions.
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+
       <Typography variant="h6" sx={{ fontWeight: "bold" }}>
         Empathy Map
       </Typography>
-      <Image src={empathyMapParticipantImage} fit="contain" />
+      <Image src={empathyMapP} fit="contain" />
     </>
   );
 }
@@ -377,7 +438,55 @@ function IdeateAndPrototypeSection() {
 }
 
 function ValidateSection() {
-  return <>hi</>;
+  return (
+    <>
+      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+        Validate
+      </Typography>
+
+      <Grid container spacing={3}>
+        <Grid item lg={6}>
+          <Stack direction="row">
+            <Image src={validateR} fit="contain" width="20%" />
+          </Stack>
+          <Typography variant="body1">
+            1 student participant who usually need to conduct survey and analyze
+            the survey result for his research project (In person)
+          </Typography>
+        </Grid>
+        <Grid item lg={6}>
+          <Stack direction="row">
+            <Image src={validateP} fit="contain" width="20%" />
+            <Image src={validateP} fit="contain" width="20%" />
+          </Stack>
+          <Typography variant="body1">
+            2 workers who like to do some paid survey in their free time (Via
+            zoom)
+          </Typography>
+        </Grid>
+      </Grid>
+
+      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+        Refine
+      </Typography>
+      <Typography variant="body1">
+        1：Add a new function — ‘current filters’, which allows the users to
+        track/edit the current filters easily.
+      </Typography>
+      <Typography variant="body1">
+        → Pain point: Take long time for selecting a preferred survey
+      </Typography>
+      <Image src={refine1} fit="contain" />
+
+      <Typography variant="body1">
+        2: show all surveys in the table instead of card component
+      </Typography>
+      <Typography variant="body1">
+        → Pain point: hard to organize all survey
+      </Typography>
+      <Image src={refine2} fit="contain" />
+    </>
+  );
 }
 
 function FinalDeliverySection() {
