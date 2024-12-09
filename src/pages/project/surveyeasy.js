@@ -704,52 +704,129 @@ function FinalDeliverySection() {
       </Grid>
       <SmallHeader>Key Features</SmallHeader>
 
+      <SmallHeader>Researcher</SmallHeader>
+
       <Grid container spacing={3} sx={{ marginTop: 5 }}>
         <Grid item lg={6}>
+          <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+            Survey Info and Filters
+          </Typography>
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-            Filter
+            01
           </Typography>
-          <Typography variant="body1">
-            01. (Two Advantages: one for filtering surveys, the other one for
-            quick filter participants with only a few clicks while creating
-            surveys. Function: eliminate mismatch)
+          <Typography variant="h6">
+            Filters allows researcher to filter for eligible paticipants by age,
+            country, gender, etc.
           </Typography>
-          <Typography variant="body1">
-            useful in situations where the user may not know exactly the exact
-            word of title to search for or where choosing from a list of search
-            criteria is faster than typing in all the search terms.
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            02
           </Typography>
-          <Typography variant="body1">
-            → Pain point: Take long time for selecting a preferred survey
+          <Typography variant="h6">
+            Survey info allows participants to search surveys by title,
+            description, category, duration, etc.
+          </Typography>
+          <Typography variant="h6">
+            Pain point: Some responses come from ineligible participants
           </Typography>
         </Grid>
-        <Grid item lg={6}></Grid>
+
+        <Grid item lg={6}>
+          <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+            Edit Survey & Preview
+          </Typography>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            01
+          </Typography>
+          <Typography variant="h6">
+            Provides multiple choice, multiple answers, short answer question
+            types, with a convenient interface to add/delete questions/choices.
+          </Typography>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            02
+          </Typography>
+          <Typography variant="h6">
+            Preview allows researchers to view the survey as participants will.
+          </Typography>
+          <Typography variant="h6">
+            Pain point: Survey requires multiple question types
+          </Typography>
+        </Grid>
       </Grid>
 
       <Grid container spacing={3} sx={{ marginTop: 5 }}>
         <Grid item lg={6}>
-          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-            Sort All surveys, can sort each column name individually
+          <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+            Survey Results
           </Typography>
 
-          <Typography variant="body1"></Typography>
+          <Typography variant="h6">
+            Provides automatic analysis of survey answers by question, with
+            visualization
+          </Typography>
 
-          <Typography variant="body1">→ Pain point: </Typography>
+          <Typography variant="h6">
+            Viewing answers by response and downloading survey data as JSON
+          </Typography>
+
+          <Typography variant="h6">
+            Pain point: View responses with automatic data visualization
+          </Typography>
         </Grid>
-        <Grid item lg={6}></Grid>
+
+        <Grid item lg={6}>
+          <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+            Past Surveys Table
+          </Typography>
+
+          <Typography variant="h6">
+            Displays past surveys with essential information (title, status,
+            progress, etc.)
+          </Typography>
+          <Typography variant="h6">
+            Allows sorting of any column to find relevant surveys easily
+          </Typography>
+
+          <Typography variant="h6">
+            Pain point: Finding past surveys easily
+          </Typography>
+        </Grid>
       </Grid>
+
+      <SmallHeader>Participant</SmallHeader>
 
       <Grid container spacing={3} sx={{ marginTop: 5 }}>
         <Grid item lg={6}>
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-            Automatic analysis of survey results (counting, visualization)
+            Search and Filters
           </Typography>
-
-          <Typography variant="body1"></Typography>
-
-          <Typography variant="body1">→ Pain point: </Typography>
+          <Typography variant="h6">
+            Allows searching for surveys of interest by keyword or filter by
+            category, duration, or time sensitivity.
+          </Typography>
+          <Typography variant="h6">
+            Displays current filters for easy viewing and editing
+          </Typography>
+          <Typography variant="h6">
+            Pain point: It's difficult to find surveys that are interesting.
+          </Typography>
         </Grid>
-        <Grid item lg={6}></Grid>
+
+        <Grid item lg={6}>
+          <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+            Taking Surveys
+          </Typography>
+          <Typography variant="h6">
+            Title and description are sticky at the top of the page for easy
+            viewing
+          </Typography>
+          <Typography variant="h6">
+            Allow saving drafts and continuing later from the drafts page
+          </Typography>
+          <Typography variant="h6">
+            Pain point: It's difficult to save the progress on a survey, then
+            find it and continue later.
+          </Typography>
+        </Grid>
       </Grid>
     </>
   );
