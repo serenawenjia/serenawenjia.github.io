@@ -65,7 +65,7 @@ function SurveyEasyPage() {
                 Project
               </Typography>
               <Typography variant="body1">
-                Research, Design, & Development: SurveyEasy Website
+                Design & Development: TA Management Website
               </Typography>
             </Grid>
             <Grid item xs={6} lg={3}>
